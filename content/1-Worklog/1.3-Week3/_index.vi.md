@@ -1,59 +1,48 @@
 ---
 title: "Worklog Tuần 3"
-date: 2024-01-01
-weight: 1
+date: 2026-09-28
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Tìm hiểu cách quản lý quyền truy cập dữ liệu trên Amazon S3.
+- Tìm hiểu S3 Versioning để lưu trữ và khôi phục các phiên bản file.
+- Tìm hiểu các loại S3 Storage Classes và cách lựa chọn phù hợp.
+- Tìm hiểu cách quản lý dữ liệu tự động bằng S3 Lifecycle.
+- Tìm hiểu cách tạo một website tĩnh đơn giản bằng Amazon S3.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | Tìm hiểu S3 Bucket Policy và cách quản lý quyền truy cập vào Bucket. | 28/09/2026 | 28/09/2026 | [AWS S3 Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html) |
+| 3 | Tìm hiểu S3 Versioning. Thực hành bật Versioning, upload file và kiểm tra các phiên bản khác nhau. | 29/09/2026 | 29/09/2026 | [S3 Versioning](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Versioning.html) |
+| 4 | Tìm hiểu các loại S3 Storage Classes và sự khác nhau giữa S3 Standard, Standard-IA và Glacier. | 30/09/2026 | 30/09/2026 | [S3 Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html) |
+| 5 | Tìm hiểu S3 Lifecycle và cách tự động chuyển hoặc xóa file sau một khoảng thời gian. | 01/10/2026 | 01/10/2026 | [S3 Lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html) |
+| 6 | Tìm hiểu S3 Static Website Hosting và thực hành upload các file HTML của website tĩnh lên S3. | 02/10/2026 | 02/10/2026 | [S3 Website Hosting](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html) |
+| 7 | Ôn tập kiến thức đã học, kiểm tra và xóa các tài nguyên AWS không còn sử dụng. | 03/10/2026 | 03/10/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
 
 ### Kết quả đạt được tuần 3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+**Kiến thức đã tìm hiểu:**
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Hiểu cách quản lý quyền truy cập dữ liệu trên Amazon S3 bằng Bucket Policy.
+- Biết S3 Versioning giúp lưu trữ nhiều phiên bản của cùng một file và hỗ trợ khôi phục dữ liệu.
+- Phân biệt được một số loại S3 Storage Classes như Standard, Standard-IA và Glacier.
+- Hiểu S3 Lifecycle giúp tự động chuyển lớp lưu trữ hoặc xóa file theo thời gian.
+- Biết Amazon S3 có thể dùng để lưu trữ và cung cấp các file của website tĩnh.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+**Các bài thực hành trong tài liệu:**
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Bật S3 Versioning, upload và kiểm tra các phiên bản file.
+- Tạo S3 Lifecycle Rule để quản lý thời gian lưu trữ file.
+- Upload file HTML lên S3 và tìm hiểu cách cấu hình Static Website Hosting.
+- Kiểm tra và xóa các tài nguyên không còn sử dụng để hạn chế chi phí.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
+**Khó khăn gặp phải:**
+- Mất khá nhiều thời gian để tìm hiểu các loại S3 Storage Classes vì có nhiều loại với chức năng và chi phí khác nhau.
+- Khi thực hành S3 Static Website Hosting, ban đầu chưa truy cập được website do chưa cấu hình đúng quyền truy cập Bucket.
 
