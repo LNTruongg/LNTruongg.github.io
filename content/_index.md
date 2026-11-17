@@ -1,44 +1,32 @@
 ---
-title: "Internship Report"
-date: 2024-01-01
+title: "First Cloud Journey"
+date: 2026-09-14
 weight: 1
 chapter: false
 ---
 
-    
-# Internship Report
+# First Cloud Journey
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+### About Me
 
-### Student Information:
-&emsp; **Full Name:** Nguyen Van A
+I am **Lê Nhật Trường**, an **AI** student at **FPT University**. I am currently following an AWS learning path through the **First Cloud Journey** program, which runs from **September 14 to December 5, 2026**. This website records my learning process, the AWS topics I explore, and related content throughout the program.
 
-&emsp; **Phone Number:** 0989888999 
+### Personal Information
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Full Name:** Lê Nhật Trường
 
-&emsp; **University:** Ho Chi Minh City University of Technology and Education
+&emsp; **University:** FPT University
 
-&emsp; **Major:** Information Technology
+&emsp; **Major:** AI
 
-&emsp; **Class:** AWS082025
+&emsp; **Email:** [lenhattruongbt71@gmail.com](mailto:lenhattruongbt71@gmail.com)
 
-&emsp; **Internship Company:** Amazon Web Services Viet Nam Company Limited
+&emsp; **GitHub:** [github.com/LNTruongg](https://github.com/LNTruongg)
 
-&emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
+&emsp; **Program:** First Cloud Journey
 
-&emsp; **Internship Duration:** From 12/08/2025 to 12/11/2025
+&emsp; **Learning Period:** September 14, 2026 – December 5, 2026
 
-![Your profile picture](/images/avatar.png)
+### Website Content
 
-### Report Content
-
-1.  [Worklog](1-Worklog/)
-2.  [Proposal](2-Proposal/)
-3.  [BlogsPosted](3-BlogsPosted/)
-4.  [Events Participated](4-EventParticipated/)
-5.  [Workshop](5-Workshop/)
-6.  [Self-evaluation](6-Self-evaluation/)
-7.  [Sharing and Feedback](7-Feedback/)
+1. [Worklog](1-Worklog/)

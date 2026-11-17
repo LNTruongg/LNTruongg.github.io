@@ -1,59 +1,45 @@
 ---
 title: "Worklog Tuần 11"
-date: 2024-01-01
-weight: 2
+date: 2026-11-23
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 11:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Tìm hiểu AWS Elastic Beanstalk và cách dịch vụ này hỗ trợ triển khai ứng dụng web.
+- Làm quen với Docker, Container và Docker Image.
+- Hiểu Amazon ECR dùng để lưu Image, còn Amazon ECS dùng để chạy và quản lý Container.
+- Biết các thành phần cơ bản của ECS và chú ý chi phí trước khi thực hành.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | Tìm hiểu Elastic Beanstalk và cách dịch vụ này hỗ trợ đưa ứng dụng web lên AWS mà không cần tự cấu hình mọi thành phần hạ tầng. | 23/11/2026 | 23/11/2026 | [AWS Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html) |
+| 3 | Tìm hiểu Application, Environment và Platform trong Elastic Beanstalk. Đọc ví dụ cập nhật phiên bản ứng dụng và xem vì sao môi trường chạy vẫn có thể phát sinh phí. | 24/11/2026 | 24/11/2026 | [Elastic Beanstalk Concepts](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.html), [Elastic Beanstalk Pricing](https://aws.amazon.com/elasticbeanstalk/pricing/) |
+| 4 | Tìm hiểu Docker và Container. Phân biệt Docker Image với Container, đọc ví dụ Dockerfile dùng để đóng gói ứng dụng. | 25/11/2026 | 25/11/2026 | [Containers on Amazon ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-configuration.html) |
+| 5 | Tìm hiểu Amazon ECR, Repository và Image Tag. Xem cách Image được lưu trên ECR để các dịch vụ khác có thể sử dụng; không tạo Repository thực tế. | 26/11/2026 | 26/11/2026 | [Amazon ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html) |
+| 6 | Tìm hiểu Amazon ECS và các khái niệm Cluster, Task Definition, Task và Service. Đọc về hai cách chạy Container phổ biến trên EC2 và Fargate, không khởi chạy Task. | 27/11/2026 | 27/11/2026 | [Amazon ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html), [ECS Task Definitions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definitions.html) |
+| 7 | Ôn tập sự khác nhau giữa Elastic Beanstalk, ECR và ECS. Xem lại quá trình từ Docker Image đến ECR rồi ECS, đồng thời đọc bảng giá để tránh phát sinh chi phí. | 28/11/2026 | 28/11/2026 | [Amazon ECS Pricing](https://aws.amazon.com/ecs/pricing/), [Amazon ECR Pricing](https://aws.amazon.com/ecr/pricing/) |
 
-### Kết quả đạt được tuần 11:
+### Kết quả dự kiến tuần 11:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+**Kiến thức cần nắm được:**
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Hiểu Elastic Beanstalk giúp đơn giản hóa việc triển khai và quản lý ứng dụng, nhưng các tài nguyên như EC2 hoặc Load Balancer được tạo ra vẫn có thể tính phí.
+- Biết Docker Image là gói chứa ứng dụng và các thành phần cần thiết để chạy; Container là môi trường chạy được tạo từ Image.
+- Hiểu ECR dùng để lưu trữ Container Image, còn ECS giúp chạy và quản lý các Container trên AWS.
+- Làm quen với Cluster, Task Definition, Task và Service trong ECS; biết ECS có thể sử dụng EC2 hoặc Fargate để chạy ứng dụng.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+**Ôn tập và tìm hiểu theo tài liệu:**
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Xem ví dụ triển khai ứng dụng web bằng Elastic Beanstalk và các thành phần AWS được tạo phía sau.
+- Đọc ví dụ Dockerfile và quá trình lưu Image trên ECR, sau đó sử dụng Image trong ECS.
+- Chỉ tìm hiểu qua tài liệu, không tạo Elastic Beanstalk Environment, ECR Repository hoặc chạy ECS Task để tránh chi phí ngoài dự kiến.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+**Những điểm cần chú ý và cách tìm hiểu:**
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Image và Container là hai khái niệm khá gần nhau. Có thể ghi nhớ đơn giản: Image là bản đóng gói ứng dụng, còn Container là phiên bản đang chạy từ Image đó.
+- ECR và ECS cũng dễ bị lẫn vai trò. Khi ôn lại quy trình, chỉ cần nhớ ECR lưu Image, còn ECS sử dụng Image để chạy và quản lý Container.

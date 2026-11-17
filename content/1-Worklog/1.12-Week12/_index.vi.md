@@ -1,58 +1,46 @@
 ---
 title: "Worklog Tuần 12"
-date: 2024-01-01
-weight: 2
+date: 2026-11-30
+weight: 12
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 ### Mục tiêu tuần 12:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Tìm hiểu Infrastructure as Code (IaC) và cách AWS CloudFormation hỗ trợ quản lý hạ tầng.
+- Làm quen với CloudFormation Template, Stack và một số thành phần cơ bản trong file YAML.
+- Hiểu tầm quan trọng của Backup & Recovery và các khái niệm RPO, RTO.
+- Tìm hiểu AWS Backup và ôn lại những kiến thức AWS đã học trong 12 tuần.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | Tìm hiểu Infrastructure as Code (IaC) và AWS CloudFormation. Đọc ví dụ dùng Template để quản lý tài nguyên thay vì tạo từng tài nguyên bằng tay. | 30/11/2026 | 30/11/2026 | [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html) |
+| 3 | Tìm hiểu CloudFormation Template và Stack. Làm quen với file YAML cùng các phần Resources, Parameters và Outputs; chỉ đọc ví dụ, không tạo Stack. | 01/12/2026 | 01/12/2026 | [CloudFormation Template Sections](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html) |
+| 4 | Tìm hiểu vì sao cần Backup dữ liệu. Xem các ví dụ Snapshot của EBS và sao lưu RDS để hiểu cách phục hồi khi xảy ra sự cố. | 02/12/2026 | 02/12/2026 | [Amazon EBS Snapshots](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-snapshots.html), [Amazon RDS Backup](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_CommonTasks.BackupRestore.html) |
+| 5 | Tìm hiểu AWS Backup, Backup Plan, Backup Vault và thời gian lưu bản sao lưu. Đọc về chi phí lưu trữ Backup, không tạo Backup Plan hoặc Snapshot thật. | 03/12/2026 | 03/12/2026 | [AWS Backup](https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html), [Backup Plans](https://docs.aws.amazon.com/aws-backup/latest/devguide/about-backup-plans.html) |
+| 6 | Tìm hiểu RPO và RTO qua ví dụ một website bị mất dữ liệu hoặc ngừng hoạt động. Đọc cách hai chỉ số này ảnh hưởng đến kế hoạch Backup & Recovery. | 04/12/2026 | 04/12/2026 | [Disaster Recovery Objectives](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/disaster-recovery-dr-objectives.html) |
+| 7 | Ôn tập các chủ đề đã học từ EC2, S3, VPC đến Lambda, Database và Monitoring. Xem lại những điểm còn chưa rõ và đọc bảng giá CloudFormation, AWS Backup; không tạo tài nguyên mới. | 05/12/2026 | 05/12/2026 | [CloudFormation Pricing](https://aws.amazon.com/cloudformation/pricing/), [AWS Backup Pricing](https://aws.amazon.com/backup/pricing/) |
 
-### Kết quả đạt được tuần 12:
+### Kết quả dự kiến tuần 12:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+**Kiến thức cần nắm được:**
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Hiểu IaC là cách quản lý hạ tầng bằng file cấu hình thay vì làm mọi thao tác thủ công; CloudFormation giúp tạo và quản lý tài nguyên AWS theo Template.
+- Biết Template mô tả tài nguyên cần tạo, còn Stack là nhóm tài nguyên được CloudFormation quản lý. Làm quen với Resources, Parameters và Outputs trong YAML.
+- Hiểu Backup giúp giảm nguy cơ mất dữ liệu khi có sự cố; biết Snapshot và bản sao lưu Database là những cách bảo vệ dữ liệu thường gặp.
+- Biết AWS Backup giúp quản lý việc sao lưu tập trung thông qua Backup Plan và Backup Vault.
+- Phân biệt RPO là mức mất dữ liệu có thể chấp nhận, còn RTO là khoảng thời gian tối đa chấp nhận để khôi phục hệ thống.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+**Ôn tập và tìm hiểu theo tài liệu:**
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Đọc một CloudFormation Template mẫu để nhận biết các phần chính, không tạo Stack hay EC2 thực tế.
+- Xem ví dụ Backup cho EC2 và RDS, đồng thời ôn lại sự khác nhau giữa sao lưu dữ liệu và khôi phục dữ liệu.
+- Tổng kết những kiến thức AWS đã học trong 12 tuần và đọc bảng giá. Không tạo Snapshot hoặc sử dụng AWS Backup thực tế để tránh phát sinh chi phí lưu trữ.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+**Những điểm cần chú ý và cách tìm hiểu:**
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Cấu trúc YAML trong CloudFormation có nhiều phần nên có thể hơi khó đọc. Nên bắt đầu với Template ngắn và tập trung vào Resources trước, sau đó mới tìm hiểu Parameters và Outputs.
+- RPO và RTO đều liên quan đến khôi phục nên cần phân biệt bằng ví dụ: RPO nói về lượng dữ liệu có thể mất, còn RTO nói về thời gian hệ thống có thể ngừng hoạt động.

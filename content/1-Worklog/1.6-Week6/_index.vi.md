@@ -1,58 +1,52 @@
+
 ---
 title: "Worklog Tuần 6"
-date: 2024-01-01
-weight: 1
+date: 2026-10-19
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Tìm hiểu Amazon RDS và cách AWS hỗ trợ quản lý cơ sở dữ liệu quan hệ.
+- Hiểu sự khác nhau giữa Single-AZ, Multi-AZ DB Instance và Read Replica của Amazon RDS.
+- Làm quen với Amazon Aurora và mô hình cơ bản gồm Writer, Reader và Cluster Storage.
+- Phân biệt cơ sở dữ liệu SQL và NoSQL, tìm hiểu các khái niệm cơ bản của Amazon DynamoDB.
+- Làm quen với Partition Key, Sort Key, Query, Scan và tìm hiểu chi phí trước khi quyết định thực hành.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | Tìm hiểu Amazon RDS, khái niệm DB Instance và một số Database Engine phổ biến như MySQL, PostgreSQL. Ôn lại mối liên hệ giữa RDS, VPC và Security Group; đọc tổng quan các yếu tố ảnh hưởng đến chi phí. | 19/10/2026 | 19/10/2026 | [Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html), [RDS Pricing](https://aws.amazon.com/rds/pricing/) |
+| 3 | Tìm hiểu các mô hình Single-AZ và Multi-AZ DB Instance của RDS. Phân biệt Standby phục vụ Failover với Read Replica phục vụ nhu cầu đọc dữ liệu; phân tích sơ đồ thay vì tạo nhiều DB Instance. | 20/10/2026 | 20/10/2026 | [RDS Multi-AZ](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZSingleStandby.html), [RDS Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html) |
+| 4 | Tìm hiểu Amazon Aurora, hai phiên bản tương thích MySQL và PostgreSQL. Xem mô hình Aurora Cluster gồm Writer, Reader và tầng lưu trữ dùng chung; tìm hiểu khái niệm Aurora Serverless và chi phí. | 21/10/2026 | 21/10/2026 | [Amazon Aurora](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html), [Aurora Pricing](https://aws.amazon.com/rds/aurora/pricing/) |
+| 5 | Ôn lại kiến thức Database cơ bản và so sánh SQL với NoSQL. Tìm hiểu Amazon DynamoDB, mô hình Key-Value/Document và các thành phần Table, Item, Attribute thông qua dữ liệu ví dụ. | 22/10/2026 | 22/10/2026 | [What Is DynamoDB?](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html), [DynamoDB Core Components](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html) |
+| 6 | Tìm hiểu Primary Key trong DynamoDB, gồm Partition Key và Sort Key. Luyện tập thiết kế trên giấy một bảng `Orders` đơn giản với `userId` và `orderId`, không tạo Table thực tế trên AWS. | 23/10/2026 | 23/10/2026 | [DynamoDB Core Components](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html) |
+| 7 | Tìm hiểu sự khác nhau giữa Query và Scan trong DynamoDB. Đọc khái niệm On-Demand và Provisioned Capacity, kiểm tra điều kiện Free Tier; ôn tập bằng bảng so sánh RDS, Aurora và DynamoDB mà không triển khai Database tính phí. | 24/10/2026 | 24/10/2026 | [DynamoDB Query](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.html), [DynamoDB Scan](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html), [DynamoDB Pricing](https://aws.amazon.com/dynamodb/pricing/) |
 
 ### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+**Kiến thức đã tìm hiểu:**
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+- Hiểu Amazon RDS là dịch vụ giúp triển khai và quản lý cơ sở dữ liệu quan hệ, hỗ trợ các Database Engine quen thuộc như MySQL và PostgreSQL.
+- Biết RDS DB Instance là một đơn vị chạy Database và thường được đặt trong VPC để quản lý kết nối mạng; liên hệ được với kiến thức VPC và Security Group đã học ở tuần 4.
+- Phân biệt Single-AZ với mô hình Multi-AZ DB Instance có một Standby ở Availability Zone khác. Hiểu Standby trong mô hình này phục vụ khả năng dự phòng và tự động Failover, không dùng để xử lý truy vấn đọc thông thường.
+- Hiểu Read Replica giúp phân chia khối lượng truy vấn đọc khỏi Database chính; phân biệt mục đích Read Scaling với High Availability.
+- Biết Amazon Aurora là Database Engine tương thích MySQL/PostgreSQL, có mô hình Cluster với Writer, Reader và tầng lưu trữ dùng chung.
+- Hiểu DynamoDB là dịch vụ NoSQL được AWS quản lý hoàn toàn; làm quen với Table, Item, Attribute và sự khác nhau giữa Primary Key chỉ có Partition Key và Primary Key kết hợp Partition Key với Sort Key.
+- Biết Query truy xuất dữ liệu dựa trên giá trị Partition Key, còn Scan duyệt các Item trong bảng hoặc Index; hiểu rằng hai cách truy xuất có đặc điểm sử dụng tài nguyên khác nhau.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+**Tìm hiểu và luyện tập theo tài liệu:**
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+- Phân tích các sơ đồ Single-AZ, Multi-AZ DB Instance và Read Replica để so sánh mục đích sử dụng của từng mô hình.
+- Xem mô hình Aurora Cluster và xác định vai trò của Writer, Reader và Cluster Storage, thay vì tạo một Cluster có thể phát sinh chi phí.
+- Luyện tập mô phỏng bảng `Orders` bằng dữ liệu mẫu trên giấy hoặc trong file ghi chú, với `userId` là Partition Key và `orderId` là Sort Key; không tạo DynamoDB Table trên tài khoản AWS.
+- Lập bảng so sánh đơn giản giữa RDS, Aurora và DynamoDB theo loại cơ sở dữ liệu, cách tổ chức dữ liệu và trường hợp sử dụng phù hợp.
+- Đọc chính sách chi phí của RDS, Aurora và DynamoDB. Nhận biết DynamoDB có mức sử dụng miễn phí nhất định với Provisioned Capacity nhưng vẫn phải kiểm tra giới hạn và các tính năng có tính phí trước khi thao tác trên tài khoản.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+**Khó khăn gặp phải và cách giải quyết:**
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Ban đầu chưa phân biệt rõ Multi-AZ Standby với Read Replica vì cả hai đều liên quan đến việc sao chép dữ liệu. Sau khi đối chiếu sơ đồ và mục đích sử dụng, đã hiểu Standby trong mô hình Multi-AZ DB Instance dùng để Failover, còn Read Replica chủ yếu giúp mở rộng khả năng đọc.
+- Chưa quen cách tổ chức dữ liệu trong DynamoDB vì trước đó chủ yếu biết đến bảng SQL. Việc tự đặt ví dụ bảng `Orders` và xác định Partition Key, Sort Key giúp hình dung rõ hơn cách DynamoDB định danh và truy vấn các Item.

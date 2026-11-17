@@ -1,59 +1,52 @@
+
 ---
 title: "Worklog Tuần 5"
-date: 2024-01-01
-weight: 1
+date: 2026-10-12
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 5:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Tìm hiểu Load Balancing và lý do cần phân phối lưu lượng truy cập giữa nhiều máy chủ.
+- Làm quen với Elastic Load Balancing, đặc biệt là Application Load Balancer (ALB).
+- Hiểu vai trò của Listener, Target Group và Health Check trong ALB.
+- Tìm hiểu Auto Scaling Group (ASG), Launch Template và cách điều chỉnh số lượng EC2 theo nhu cầu.
+- Phân tích mô hình kết hợp ALB và ASG ở mức cơ bản, đồng thời tìm hiểu chi phí trước khi thực hành.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | Tìm hiểu khái niệm Load Balancing và Single Point of Failure. Tìm hiểu Elastic Load Balancing (ELB), mục đích sử dụng và sự khác nhau cơ bản giữa Application Load Balancer và Network Load Balancer. | 12/10/2026 | 12/10/2026 | [Elastic Load Balancing](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html) |
+| 3 | Tìm hiểu Application Load Balancer hoạt động ở Layer 7. Làm quen với Listener, Listener Rule và Target Group; xem ví dụ điều hướng request dựa trên URL path. | 13/10/2026 | 13/10/2026 | [Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/), [ALB Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html) |
+| 4 | Tìm hiểu Health Check và cách ALB xác định Target Healthy hoặc Unhealthy. Phân tích sơ đồ luồng request từ Client qua ALB đến các EC2 trong Target Group ở nhiều Availability Zone. | 14/10/2026 | 14/10/2026 | [ALB Target Groups](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html), [Target Group Health Checks](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/target-group-health-checks.html) |
+| 5 | Tìm hiểu sự khác nhau giữa Scale Up/Down và Scale Out/In. Làm quen với Amazon EC2 Auto Scaling, Auto Scaling Group và Launch Template, gồm các thông tin như AMI, Instance Type và Security Group. | 15/10/2026 | 15/10/2026 | [EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html), [Launch Templates](https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-templates.html) |
+| 6 | Tìm hiểu ba thông số Minimum, Maximum và Desired Capacity của ASG. Đọc ví dụ về Target Tracking Scaling theo mức sử dụng CPU và cách ASG bổ sung EC2 khi cần thiết. | 16/10/2026 | 16/10/2026 | [ASG Scaling Limits](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-capacity-limits.html), [Target Tracking Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-target-tracking.html) |
+| 7 | Ôn tập và phác thảo sơ đồ ALB kết hợp ASG bằng draw.io. Tìm hiểu cách EC2 được thêm vào Target Group và kiểm tra bảng giá AWS; không tạo ALB hoặc ASG chạy EC2 để tránh phát sinh chi phí. | 17/10/2026 | 17/10/2026 | [ALB with Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html), [ELB Pricing](https://aws.amazon.com/elasticloadbalancing/pricing/), [EC2 Auto Scaling Pricing](https://aws.amazon.com/ec2/autoscaling/pricing/) |
 
 ### Kết quả đạt được tuần 5:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+**Kiến thức đã tìm hiểu:**
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Hiểu Load Balancer giúp phân phối request đến nhiều máy chủ, hạn chế phụ thuộc vào một EC2 duy nhất và cải thiện khả năng phục vụ của ứng dụng.
+- Biết Elastic Load Balancing có nhiều loại; trong đó Application Load Balancer phù hợp với ứng dụng HTTP/HTTPS, còn Network Load Balancer hoạt động chủ yếu ở Layer 4.
+- Hiểu luồng xử lý cơ bản `Client → ALB → Listener Rule → Target Group → EC2` và cách ALB điều hướng request theo đường dẫn URL.
+- Biết Health Check giúp ALB theo dõi trạng thái Target để ưu tiên chuyển request đến các Target đang hoạt động bình thường.
+- Phân biệt Scale Up/Down là thay đổi cấu hình máy chủ, còn Scale Out/In là tăng hoặc giảm số lượng máy chủ.
+- Hiểu ASG sử dụng Launch Template để xác định cấu hình EC2 và duy trì số lượng Instance theo Desired Capacity, trong giới hạn Minimum và Maximum.
+- Làm quen với Target Tracking Scaling và vai trò của CloudWatch Metrics trong việc hỗ trợ tự động mở rộng hệ thống.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+**Tìm hiểu và luyện tập theo tài liệu:**
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Phân tích ví dụ một website có hai EC2 phía sau ALB để hình dung cách phân phối request và tình huống một Target không vượt qua Health Check.
+- Phác thảo bằng draw.io mô hình đơn giản gồm Client, ALB, Target Group và các EC2 thuộc Auto Scaling Group, liên hệ với kiến thức VPC và Availability Zone từ những tuần trước.
+- Luyện tập với ví dụ giả định `Min = 1`, `Desired = 2`, `Max = 3` để hiểu ASG có thể điều chỉnh số lượng EC2 như thế nào.
+- Đọc hướng dẫn kết hợp ALB với ASG thay vì trực tiếp chạy bài lab tạo nhiều EC2.
+- Tìm hiểu rằng ALB có phí theo thời gian chạy và mức sử dụng LCU. EC2 Auto Scaling không thu phí riêng nhưng EC2, CloudWatch và các tài nguyên liên quan vẫn có thể phát sinh chi phí. Vì vậy, tuần này chỉ học và phân tích sơ đồ, không triển khai hệ thống thực tế.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+**Khó khăn gặp phải và cách giải quyết:**
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Ban đầu dễ nhầm Listener với Target Group vì cả hai đều tham gia xử lý request trong ALB. Sau khi vẽ lại luồng request, đã hiểu Listener nhận kết nối và xét Rule, còn Target Group chứa các Target được chọn để xử lý request.
+- Chưa phân biệt rõ vai trò của Load Balancer và Auto Scaling Group vì cả hai đều liên quan đến khả năng mở rộng. Việc so sánh từng nhiệm vụ trong sơ đồ giúp hiểu rằng ALB phân phối lưu lượng, còn ASG quản lý số lượng EC2 theo nhu cầu.

@@ -1,40 +1,32 @@
 ---
-title: "Báo cáo thực tập"
-date: 2024-01-01
+title: "First Cloud Journey"
+date: 2026-09-14
 weight: 1
 chapter: false
 ---
 
-# Báo cáo thực tập
-### Thông tin sinh viên:
-&emsp; **Họ và tên:** Nguyễn Văn A
+# First Cloud Journey
 
-&emsp; **Số điện thoại:** 0989888999
+### Giới thiệu
 
-&emsp; **Email:** Anguyenvan@gmail.com
+Tôi là **Lê Nhật Trường**, sinh viên ngành **AI** tại **FPT University**. Hiện tại, tôi đang theo lộ trình tìm hiểu AWS trong chương trình **First Cloud Journey**, diễn ra từ ngày **14/09/2026 đến 05/12/2026**. Website này ghi lại quá trình học, các chủ đề AWS đã tìm hiểu và những nội dung liên quan trong suốt chương trình.
 
-&emsp; **Trường:** Đại học Sư phạm Kỹ thuật TP.HCM
+### Thông tin cá nhân
 
-&emsp; **Ngành:** Công nghệ thông tin
+&emsp; **Họ và tên:** Lê Nhật Trường
 
-&emsp; **Lớp:** AWS082025
+&emsp; **Trường:** FPT University
 
-&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
+&emsp; **Ngành:** AI
 
-&emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
+&emsp; **Email:** [lenhattruongbt71@gmail.com](mailto:lenhattruongbt71@gmail.com)
 
-&emsp; **Thời gian thực tập:** Từ ngày 12/08/2025 đến ngày 12/11/2025
+&emsp; **GitHub:** [github.com/LNTruongg](https://github.com/LNTruongg)
 
-![Ảnh đại diện của bạn](/images/avatar.png)
+&emsp; **Chương trình:** First Cloud Journey
 
+&emsp; **Thời gian học:** 14/09/2026 – 05/12/2026
 
+### Nội dung website
 
-### Nội dung báo cáo
-
-1.  [Worklog](1-Worklog/)
-2.  [Proposal](2-Proposal/)
-3.  [Các bài blogs đã đăng](3-BlogsPosted/)
-4.  [Các events đã tham gia](4-EventParticipated/)
-5.  [Workshop](5-Workshop/)
-6.  [Tự đánh giá](6-Self-evaluation/)
-7.  [Chia sẻ, đóng góp ý kiến](7-Feedback/)
+1. [Worklog](1-Worklog/)
