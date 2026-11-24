@@ -8,57 +8,69 @@ pre: " <b> 4. </b> "
 
 ### Introduction
 
-During my participation in the **First Cloud AI Journey (FCAJ)** program, I had the opportunity to attend and follow several events focusing on cloud computing, artificial intelligence, and software development.
+During the **First Cloud AI Journey (FCAJ)** program, I had the opportunity to attend and follow several events related to AWS, cloud computing, and artificial intelligence.
 
-These events helped me learn more about AWS technologies, real-world AI applications, and practical experiences shared by industry speakers.
+Besides learning through documentation and practical exercises, these events introduced me to new topics and helped me understand how technology is used in real-world situations.
 
-Below are the three events I participated in during the program.
+Although some of the topics were still unfamiliar to me, I learned useful lessons about application development, technology choices, and the challenges developers need to consider when building software.
+
+Below are three events I participated in during the program.
 
 ### [Event 1 - FCAJ Buildrathon Kickoff](4.1-Event1/)
 
 - **Event Name:** FCAJ Buildrathon Kickoff.
 - **Date:** September 26, 2026.
-- **Participation Format:** Following the event presentations.
-- **Event Location:** AWS office in Ho Chi Minh City.
-- **Role:** Attendee.
+- **Format:** Following the event.
+- **Venue:** AWS Office, Ho Chi Minh City.
+- **Role:** Participant.
 
-**Main Highlights:**
+**Event Highlights:**
 
-The kickoff introduced the First Cloud AI Journey program and its Buildrathon activities. The event also featured an introduction from CMC Global and a presentation about the Triage Bot project and Market Slack Bot architecture.
+The kickoff helped me learn more about the First Cloud AI Journey program and the Buildrathon activities. It also gave me a better understanding of the goals of the program and the projects that participating teams would work on.
 
-Through these presentations, I learned how an AI application can be developed to address real-world problems and gained insights into the roles of components such as `SOUL.md`, Memory, APIs, and Databases in chatbot systems.
+Besides the program introduction, I learned about examples of how AI can be used to support daily work.
+
+The most important lesson I took away was that developing a technology product should begin with understanding real problems and user needs rather than simply choosing the latest tools.
 
 ### [Event 2 - AWS Cloud and AI Day Hanoi](4.2-Event2/)
 
 - **Event Name:** AWS Cloud and AI Day Hanoi.
 - **Date:** September 29, 2026.
-- **Main Event Location:** Hanoi, Vietnam.
-- **My Attendance Location:** Ho Chi Minh City, Vietnam.
-- **Participation Format:** Viewing party.
-- **Role:** Attendee.
+- **Main Location:** Hanoi.
+- **My Location:** Ho Chi Minh City.
+- **Format:** Viewing party.
+- **Role:** Participant.
 
-**Main Highlights:**
+**Event Highlights:**
 
-The event focused on topics such as Cloud architecture, system scalability, AI Agents, AI-assisted software development, and security on AWS.
+During the viewing party, I explored topics related to cloud computing and artificial intelligence, including cloud architecture, system scalability, and the use of AI in software development.
 
-By following the sessions at the viewing party, I gained a broader understanding of how businesses adopt Cloud and AI technologies, as well as the importance of testing, security, and system operations.
+I was particularly interested in how AI can support programmers and what developers should consider when deploying applications to the cloud.
+
+The event helped me realize that software development involves more than building features. Performance, security, and system operations are also important.
 
 ### [Event 3 - FCAJ Mini Meeting](4.3-Event3/)
 
 - **Event Name:** FCAJ Mini Meeting.
 - **Date:** October 24, 2026.
-- **Role:** Attendee.
+- **Role:** Participant.
 
-**Main Highlights:**
+**Event Highlights:**
 
-The Mini Meeting featured technical presentations on **Vietnamese Voice AI**, **AWS Resource Access Manager (RAM)**, **AWS Security Agent**, and **Amazon Bedrock AgentCore**.
+The Mini Meeting included presentations about **Vietnamese Voice AI, AWS Resource Access Manager (RAM), AWS Security Agent, and Amazon Bedrock AgentCore**.
 
-I learned about different approaches to building Voice Agents, sharing resources across multiple AWS accounts, reviewing security during the system design stage, and managing Runtime and Memory in AI Agent applications.
+Among these topics, I was most interested in Vietnamese Voice AI because it combines speech recognition, information processing, and voice responses.
+
+I also learned about AWS resource sharing, application security, and basic concepts related to managing AI Agents.
+
+Although I did not fully understand every technical topic, the meeting gave me several new areas to explore in the future.
 
 ### Conclusion
 
-Through these three events, I had the opportunity to expand my knowledge of AWS, Cloud Computing, and artificial intelligence applications.
+After participating in these three events, I gained a broader understanding of how AWS and AI can be used to develop real-world applications.
 
-In addition to the concepts covered throughout the First Cloud AI Journey program, the practical presentations helped me better understand system design, technology selection, and problem-solving approaches in software development.
+Each event offered a different learning experience, from introducing program activities and project development to exploring more advanced technical topics.
 
-These lessons also provide useful references as I continue learning and developing my restaurant recommendation and itinerary planning application for Ho Chi Minh City.
+The most useful lesson for me was that learning technology is not only about understanding individual tools. It is also about knowing how to choose and apply them to solve specific problems.
+
+These experiences gave me more direction for continuing my AWS studies and contributing to **LoveSpot**, a restaurant recommendation and itinerary planning application for Ho Chi Minh City.
