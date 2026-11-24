@@ -143,6 +143,10 @@ Dưới đây là một số hình ảnh từ buổi viewing party tại TP. H�
 
 ![Hình ảnh khác từ sự kiện](picture_event_2/5.jpg)
 
+#### Hình ảnh 6 — Hình ảnh sự kiện
+
+![Hình ảnh khác từ sự kiện](picture_event_2/toi.png)
+
 ### Tổng kết
 
 Buổi viewing party của **AWS Cloud and AI Day Hanoi ngày 29/09/2026** giúp tôi có thêm góc nhìn về lĩnh vực Cloud Computing và AI.

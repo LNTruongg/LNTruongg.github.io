@@ -143,6 +143,10 @@ Below are some photos from the viewing party in Ho Chi Minh City.
 
 ![Another photo from the event](picture_event_2/5.jpg)
 
+#### Photo 6 — Event Photo
+
+![Another photo from the event](picture_event_2/toi.png)
+
 ### Conclusion
 
 The **AWS Cloud and AI Day Hanoi viewing party on September 29, 2026** helped me learn more about Cloud Computing and Artificial Intelligence.
