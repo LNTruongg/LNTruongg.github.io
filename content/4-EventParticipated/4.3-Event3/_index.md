@@ -1,3 +1,11 @@
+---
+title: "Event 3 - FCAJ Mini Meeting"
+date: 2026-10-24
+weight: 3
+chapter: false
+pre: " <b> 4.3. </b> "
+---
+
 Event Introduction
 
 On October 24, 2026, I attended the FCAJ Mini Meeting, an event organized within the First Cloud AI Journey community.

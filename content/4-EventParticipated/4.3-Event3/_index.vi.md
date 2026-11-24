@@ -1,3 +1,11 @@
+---
+title: "Event 3 - FCAJ Mini Meeting"
+date: 2026-10-24
+weight: 3
+chapter: false
+pre: " <b> 4.3. </b> "
+---
+
 Giới thiệu sự kiện
 
 Ngày 24/10/2026, tôi tham gia buổi FCAJ Mini Meeting thuộc cộng đồng First Cloud AI Journey.

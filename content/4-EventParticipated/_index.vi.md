@@ -1,3 +1,11 @@
+---
+title: "Các sự kiện đã tham gia"
+date: 2026-11-18
+weight: 4
+chapter: false
+pre: " <b> 4. </b> "
+---
+
 Giới thiệu
 
 Trong quá trình tham gia chương trình First Cloud AI Journey (FCAJ), tôi có cơ hội tham gia và theo dõi một số sự kiện liên quan đến AWS, Cloud Computing và trí tuệ nhân tạo.
