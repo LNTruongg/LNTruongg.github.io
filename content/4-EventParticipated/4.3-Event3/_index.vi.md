@@ -1,176 +1,134 @@
----
-title: "Event 3 - FCAJ Mini Meeting"
-date: 2026-10-24
-weight: 3
-chapter: false
-pre: " <b> 4.3. </b> "
----
+Giới thiệu sự kiện
 
-### Giới thiệu sự kiện
+Ngày 24/10/2026, tôi tham gia buổi FCAJ Mini Meeting thuộc cộng đồng First Cloud AI Journey.
 
-Ngày **24/10/2026**, tôi tham gia **FCAJ Mini Meeting**, một buổi chia sẻ kỹ thuật trong cộng đồng First Cloud AI Journey.
+Buổi gặp gỡ có các phần chia sẻ về Vietnamese Voice AI, AWS Resource Access Manager (RAM), AWS Security Agent và Amazon Bedrock AgentCore.
 
-Sự kiện giới thiệu một số chủ đề liên quan đến trí tuệ nhân tạo và điện toán đám mây, bao gồm **Vietnamese Voice AI**, **AWS Resource Access Manager (RAM)**, **AWS Security Agent** và **Amazon Bedrock AgentCore**.
+Đây đều là những chủ đề khá mới đối với tôi. Ngoài việc tìm hiểu các dịch vụ AWS cơ bản, tôi muốn biết thêm cách những công nghệ này được sử dụng khi xây dựng và quản lý một ứng dụng thực tế.
 
-Thông qua các phần trình bày, tôi có cơ hội tìm hiểu thêm về cách những công nghệ này được sử dụng trong các hệ thống thực tế. Nội dung bài thu hoạch được tổng hợp từ những ghi chú và hình ảnh trình bày tại sự kiện.
+Thông tin sự kiện
 
-### Thông tin sự kiện
+Tên sự kiện: FCAJ Mini Meeting.
 
-- **Tên sự kiện:** FCAJ Mini Meeting.
-- **Thời gian:** 24/10/2026.
-- **Vai trò:** Người tham dự.
-- **Nội dung chính:** Voice AI, AWS RAM, AWS Security Agent và Amazon Bedrock AgentCore.
+Thời gian: 24/10/2026.
 
-### 1. Hear, Think, Speak — Xây dựng Voice AI tiếng Việt
+Vai trò: Người tham dự.
 
-Diễn giả **Kiet Tran**, AI Engineer tại Revve AI, chia sẻ chủ đề **Hear, Think, Speak: Building a Vietnamese Voice-AI Contact Center on AWS**.
+Nội dung chính: Voice AI, AWS RAM, AWS Security Agent và Amazon Bedrock AgentCore.
 
-Phần trình bày giới thiệu cách xây dựng hệ thống AI có khả năng giao tiếp bằng giọng nói, đặc biệt trong những tình huống như tổng đài chăm sóc khách hàng và phỏng vấn.
+1. Hear, Think, Speak — Xây dựng Voice AI tiếng Việt
 
-Một điểm tôi chú ý là hệ thống Voice AI không chỉ cần đưa ra câu trả lời chính xác mà còn phải xác định thời điểm người dùng kết thúc câu nói, xử lý nội dung và phản hồi đủ nhanh để cuộc hội thoại diễn ra tự nhiên.
+Phần đầu tiên tôi quan tâm là chủ đề Hear, Think, Speak: Building a Vietnamese Voice-AI Contact Center on AWS.
 
-#### Ba phương pháp xây dựng Voice Agent
+Nội dung này giúp tôi tìm hiểu thêm về cách xây dựng một hệ thống AI có thể nghe, hiểu và phản hồi bằng giọng nói. Một ví dụ dễ hình dung là tổng đài tự động có khả năng trao đổi với khách hàng.
 
-Diễn giả giới thiệu ba hướng tiếp cận:
+Trước đây, tôi thường sử dụng AI bằng cách nhập văn bản và nhận câu trả lời. Với Voice AI, quá trình xử lý phức tạp hơn vì hệ thống còn phải nhận diện lời nói, hiểu nội dung và tạo giọng nói phản hồi.
 
-- **Cascade:** Chia quá trình xử lý thành các bước ASR → LLM → TTS. Hệ thống chuyển giọng nói thành văn bản, xử lý nội dung bằng mô hình ngôn ngữ rồi tạo phản hồi bằng giọng nói.
-- **Speech-to-Speech (S2S):** Sử dụng mô hình xử lý đầu vào và đầu ra dưới dạng âm thanh.
-- **Full Duplex S2S:** Hướng đến khả năng nghe và nói đồng thời, giúp tương tác gần hơn với hội thoại tự nhiên.
+Các cách xử lý giọng nói
 
-Theo phần chia sẻ, nhóm phát triển vẫn sử dụng **Cascade trong môi trường production** và tiếp tục thử nghiệm các phương pháp Speech-to-Speech.
+Tôi được biết thêm về một số hướng tiếp cận:
 
-Đối với bài toán tiếng Việt, Cascade cho phép nhóm lựa chọn từng thành phần phù hợp và kiểm soát nội dung thông qua bước xử lý văn bản trung gian.
+Cascade: Chuyển giọng nói thành văn bản, dùng AI xử lý nội dung rồi chuyển câu trả lời thành âm thanh.
 
-Qua phần này, tôi hiểu thêm rằng lựa chọn kiến trúc Voice AI cần dựa trên yêu cầu thực tế về chất lượng giọng nói, độ trễ, khả năng ghi log và việc thay thế hoặc cải thiện từng thành phần.
+Speech-to-Speech: Sử dụng mô hình có khả năng xử lý đầu vào và đầu ra bằng âm thanh.
 
-#### Luồng xử lý cuộc gọi và kiến trúc AWS
+Full Duplex: Hướng đến việc hệ thống có thể nghe và nói linh hoạt hơn trong cuộc hội thoại.
 
-Trong slide kiến trúc, hệ thống có nhiều thành phần phối hợp như:
+Điều tôi thấy thú vị là một hệ thống Voice AI không chỉ cần trả lời đúng. Tốc độ phản hồi cũng quan trọng, vì nếu phải chờ quá lâu thì cuộc trò chuyện sẽ không còn tự nhiên.
 
-- SIP Server và Media Server.
-- Noise Cancellation.
-- Turn Detection.
-- Speech-to-Text.
-- LLM kết hợp Flow Engine.
-- Text-to-Speech.
+Qua phần này, tôi hiểu thêm rằng việc xây dựng ứng dụng AI có giọng nói cần kết hợp nhiều bước xử lý, thay vì chỉ sử dụng một mô hình AI.
 
-Phần trình bày cũng giới thiệu kiến trúc triển khai của Revve trong một AWS Region và trong tài khoản AWS của khách hàng.
+2. AWS Resource Access Manager — Chia sẻ tài nguyên AWS
 
-Ngoài ra, diễn giả chia sẻ một POC dành cho một ngân hàng tại Việt Nam, bao gồm các bước tiếp nhận yêu cầu, xác minh thông tin, xác định mục đích cuộc gọi và xử lý thông qua API hoặc chuyển tiếp đến nhân viên.
+Chủ đề tiếp theo là AWS Resource Access Manager (AWS RAM).
 
-Ví dụ này giúp tôi hiểu rằng một ứng dụng Voice AI thực tế không chỉ có mô hình nhận diện và tạo giọng nói mà còn phải kết hợp với quy trình nghiệp vụ.
+Khi mới học AWS, tôi chủ yếu thực hành trong một tài khoản nên chưa nghĩ nhiều đến việc quản lý tài nguyên giữa nhiều tài khoản khác nhau.
 
-### 2. AWS Resource Access Manager — Chia sẻ tài nguyên giữa các tài khoản
+Qua phần giới thiệu, tôi biết AWS RAM hỗ trợ chia sẻ một số loại tài nguyên AWS được hỗ trợ giữa các tài khoản. Điều này có thể hữu ích khi một tổ chức có nhiều nhóm làm việc hoặc cần quản lý hạ tầng theo từng bộ phận.
 
-Diễn giả **Long Huynh** giới thiệu về **AWS Resource Access Manager (AWS RAM)**.
+Một điểm tôi ghi nhớ là việc chia sẻ tài nguyên cần đi kèm với quản lý quyền truy cập. Không phải tài khoản nào cũng nên có quyền sử dụng mọi tài nguyên.
 
-Chủ đề bắt đầu từ những khó khăn khi một tổ chức sử dụng nhiều tài khoản AWS và cần chia sẻ một số tài nguyên giữa các tài khoản đó.
+Dù chưa có cơ hội thực hành AWS RAM, tôi thấy đây là kiến thức hữu ích để hiểu thêm cách các doanh nghiệp tổ chức môi trường Cloud.
 
-Những nội dung chính gồm:
+3. AWS Security Agent — Bảo mật ứng dụng Web
 
-- **Multi-account Challenge:** Những vấn đề khi quản lý hạ tầng trên nhiều tài khoản AWS.
-- **AWS RAM:** Dịch vụ hỗ trợ chia sẻ các loại tài nguyên AWS được hỗ trợ.
-- **Resource Share:** Cách xác định tài nguyên, đối tượng nhận chia sẻ và quyền truy cập.
-- **Sharing Workflow:** Quy trình chia sẻ tài nguyên từ tài khoản sở hữu đến tài khoản sử dụng.
-- **Regions và Availability Zone IDs:** Các yếu tố cần chú ý về phạm vi tài nguyên và vùng triển khai.
-- **RAM trong Landing Zone:** Vai trò của việc chia sẻ tài nguyên trong môi trường doanh nghiệp.
+Một nội dung khác trong buổi Mini Meeting là AWS Security Agent và việc sử dụng AI để hỗ trợ kiểm tra bảo mật ứng dụng.
 
-Theo ghi chú của tôi, diễn giả cũng đề cập đến việc AWS RAM hỗ trợ chia sẻ tài nguyên thuộc hơn 40 dịch vụ AWS.
+Trước đây, khi làm một website, tôi thường tập trung nhiều vào giao diện và chức năng. Những vấn đề về bảo mật đôi khi chỉ được chú ý khi ứng dụng gần hoàn thành.
 
-Điều tôi rút ra là khi quản lý nhiều tài khoản, cần xác định rõ **chia sẻ tài nguyên nào, cho tài khoản nào và với quyền truy cập gì**.
+Qua chủ đề này, tôi nhận thấy việc xem xét bảo mật nên bắt đầu sớm hơn, ngay từ lúc thiết kế hệ thống.
 
-Phần trình bày giúp tôi có thêm góc nhìn về việc tổ chức hạ tầng AWS ở quy mô nhiều tài khoản, thay vì chỉ làm việc với các dịch vụ riêng lẻ trong một tài khoản.
+Chẳng hạn, khi xây dựng một ứng dụng, người phát triển cần quan tâm đến cách quản lý quyền truy cập, bảo vệ dữ liệu và hạn chế các cấu hình không an toàn.
 
-### 3. AWS Security Agent — Bảo mật ứng dụng Web
+Tôi cũng hiểu rằng các công cụ AI có thể hỗ trợ quá trình kiểm tra, nhưng kết quả vẫn cần được xem xét lại. Không nên cho rằng sử dụng công cụ tự động là ứng dụng đã hoàn toàn an toàn.
 
-Diễn giả **Thinh** chia sẻ chủ đề **Securing Your Web Apps With AWS Security Agent**.
+Đây là phần kiến thức tôi muốn tìm hiểu thêm trước khi triển khai những dự án của mình lên AWS.
 
-Nội dung giới thiệu hướng tiếp cận sử dụng AI Agent để hỗ trợ một số hoạt động đánh giá bảo mật cho ứng dụng web.
+4. Amazon Bedrock AgentCore — Runtime và Memory
 
-Một phần tôi quan tâm là **Design Security Review**.
+Phần chia sẻ về Amazon Bedrock AgentCore giới thiệu thêm cho tôi các khái niệm liên quan đến việc xây dựng và vận hành AI Agent.
 
-Theo slide trình bày, công cụ có thể sử dụng những tài liệu như:
+Hai nội dung tôi chú ý là Runtime và Memory.
 
-- Tài liệu thiết kế ở định dạng Markdown.
-- Mã cấu hình hạ tầng Terraform.
-- Những bộ yêu cầu bảo mật được cấu hình trước.
+AgentCore Runtime
 
-Các thông tin này được sử dụng làm đầu vào để hỗ trợ quá trình đánh giá thiết kế theo những yêu cầu bảo mật tương ứng.
+Theo cách tôi hiểu, Runtime liên quan đến môi trường thực thi và cách quản lý hoạt động của AI Agent.
 
-Qua phần này, tôi nhận thấy việc kiểm tra bảo mật không nhất thiết phải chờ đến khi ứng dụng hoàn thành. Những rủi ro có thể được xem xét ngay từ giai đoạn thiết kế hệ thống.
+Điều này giúp tôi nhận ra rằng một AI Agent không chỉ cần có mô hình xử lý thông tin mà còn cần một môi trường phù hợp để chạy các tác vụ.
 
-Diễn giả cũng đề cập đến vấn đề chi phí trong phần **The Pricing Reality**.
+AgentCore Memory
 
-Tôi hiểu rằng khi sử dụng những công cụ hỗ trợ bằng AI Agent, cần xem xét phạm vi công việc và thời gian agent thực hiện tác vụ để đánh giá chi phí phù hợp.
+Phần Memory khiến tôi quan tâm hơn vì liên quan đến việc lưu giữ thông tin và ngữ cảnh trong quá trình tương tác.
 
-### 4. Amazon Bedrock AgentCore — Runtime và Memory
+Ví dụ, nếu một ứng dụng cần xử lý nhiều yêu cầu liên tiếp, việc quản lý thông tin từ những lần tương tác trước có thể giúp quá trình xử lý thuận tiện hơn.
 
-Diễn giả **Xuan An** giới thiệu về **Amazon Bedrock AgentCore**, tập trung vào hai nội dung chính là **Runtime** và **Memory Architecture**.
+Tôi cũng được làm quen với một số khái niệm như Session ID, Actor ID và dữ liệu tương tác.
 
-Phần đầu trình bày các khái niệm liên quan đến AI Agent, Agentic AI và Agentic System trước khi đi sâu hơn vào các thành phần của AgentCore.
+Dù chưa hiểu sâu về cách triển khai, phần trình bày giúp tôi biết thêm những vấn đề cần xem xét khi xây dựng ứng dụng AI có nhiều bước xử lý.
 
-#### AgentCore Runtime
+5. Những kiến thức học được
 
-Nội dung về Runtime giúp tôi có cái nhìn tổng quan về môi trường thực thi dành cho các ứng dụng AI Agent.
+Sau buổi Mini Meeting, tôi ghi lại một số điều đáng chú ý:
 
-Qua đó, tôi nhận thấy một hệ thống AI Agent cần có cơ chế vận hành và quản lý quá trình thực thi, không chỉ đơn thuần gọi AI model để nhận kết quả.
+Hiểu sơ bộ các bước xử lý trong một hệ thống Voice AI.
 
-#### AgentCore Memory
+Biết thêm một số cách xây dựng ứng dụng AI có khả năng giao tiếp bằng giọng nói.
 
-Ở phần Memory, diễn giả giới thiệu cách tổ chức thông tin tương tác dưới dạng những sự kiện và các trường dữ liệu liên quan.
+Hiểu mục đích của AWS RAM khi chia sẻ tài nguyên giữa các tài khoản.
 
-Một số khái niệm được trình bày gồm:
+Nhận thấy bảo mật cần được quan tâm ngay từ khi thiết kế ứng dụng.
 
-- **Memory ID:** Định danh của Memory.
-- **Actor ID:** Định danh đối tượng tham gia tương tác.
-- **Session ID:** Định danh phiên tương tác.
-- **Payload:** Nội dung dữ liệu được ghi nhận.
-- **Timestamp:** Thời điểm diễn ra sự kiện.
-- **Branch:** Thông tin liên quan đến nhánh hoặc luồng tương tác.
+Biết thêm về Runtime và Memory trong các hệ thống AI Agent.
 
-Thông qua slide, tôi hình dung rõ hơn cách dữ liệu từ các phiên tương tác có thể được tổ chức và quản lý để hỗ trợ hoạt động của AI Agent.
+Có thêm góc nhìn về việc kết hợp AI với những thành phần khác của ứng dụng.
 
-Ngoài ra, buổi chia sẻ còn nhắc đến **Kiro Crew** và **App & Extensibility**. Đây là những chủ đề tôi muốn tìm hiểu thêm khi có thời gian.
+Một số kiến thức vẫn còn khó đối với tôi, đặc biệt là các nội dung về AWS RAM và AgentCore. Tôi cần tiếp tục đọc thêm tài liệu để hiểu rõ hơn.
 
-### 5. Những kiến thức học được
+6. Liên hệ với dự án cá nhân
 
-Sau buổi FCAJ Mini Meeting, tôi tổng hợp được một số nội dung đáng chú ý:
+Trong thời gian này, tôi đang tham gia phát triển LoveSpot, ứng dụng gợi ý quán ăn và tạo lịch trình tại TP. Hồ Chí Minh.
 
-- Hiểu sự khác biệt cơ bản giữa Cascade, Speech-to-Speech và Full Duplex Speech-to-Speech.
-- Biết thêm cách một hệ thống Voice AI kết hợp xử lý âm thanh, mô hình AI, API và quy trình nghiệp vụ.
-- Hiểu vai trò của AWS RAM trong việc chia sẻ tài nguyên giữa nhiều tài khoản AWS.
-- Nhận thấy tầm quan trọng của việc đánh giá bảo mật từ giai đoạn thiết kế ứng dụng.
-- Có thêm nhận thức về chi phí khi sử dụng các công cụ AI hỗ trợ kiểm tra bảo mật.
-- Làm quen với Amazon Bedrock AgentCore Runtime và Memory.
-- Hiểu thêm cách tổ chức thông tin và ngữ cảnh trong một hệ thống AI Agent.
+Ở giai đoạn đó, nhóm đang tìm hiểu và xây dựng những thành phần ban đầu của ứng dụng, bao gồm giao diện, dữ liệu địa điểm và hướng xử lý các chức năng chính.
 
-### 6. Liên hệ với dự án cá nhân
+Từ những nội dung trong buổi Mini Meeting, tôi nhận thấy việc xây dựng một ứng dụng AI cần quan tâm đến cách các thành phần trao đổi dữ liệu với nhau.
 
-Dự án tôi đang phát triển là **ứng dụng gợi ý quán ăn và tạo lịch trình tại TP.HCM**.
+Đối với LoveSpot, việc quản lý thông tin địa điểm và xử lý đúng yêu cầu người dùng là những vấn đề cần được chú ý. Ngoài ra, các kiến thức về bảo mật cũng nhắc tôi phải cẩn thận hơn khi làm việc với dữ liệu và API.
 
-Ở thời điểm tham gia sự kiện, dự án đang trong giai đoạn xây dựng các thành phần ban đầu như giao diện và phần khung Backend.
+Những công nghệ như Voice AI, AWS RAM hay AgentCore hiện chỉ là kiến thức tôi tìm hiểu thêm, không phải những dịch vụ đã được sử dụng trong LoveSpot.
 
-Những nội dung được giới thiệu giúp tôi có thêm kiến thức tham khảo cho quá trình phát triển dự án.
+7. Cảm nhận cá nhân
 
-Đặc biệt, tôi nhận thấy việc phân chia rõ trách nhiệm của từng thành phần, quản lý dữ liệu và kiểm soát quá trình xử lý yêu cầu là cần thiết khi xây dựng ứng dụng AI.
+Tôi thấy buổi Mini Meeting khá thú vị vì có nhiều chủ đề khác với những bài học AWS cơ bản trước đó.
 
-Các kiến thức về bảo mật cũng giúp tôi chú ý hơn đến việc đánh giá thiết kế hệ thống trước khi triển khai.
+Trong các phần chia sẻ, tôi thích nội dung về Voice AI tiếng Việt nhất. Việc một hệ thống có thể nghe và phản hồi bằng giọng nói khiến tôi tò mò về cách dữ liệu âm thanh được xử lý phía sau.
 
-Tuy nhiên, những công nghệ được giới thiệu trong sự kiện chủ yếu là nội dung tôi tìm hiểu thêm, **không có nghĩa chúng đã được áp dụng hoặc triển khai trong dự án**.
+Tuy nhiên, cũng có những phần tôi chưa theo kịp hoàn toàn, nhất là khi nhắc đến các thành phần và kiến trúc chuyên sâu. Tôi nghĩ điều này khá bình thường vì mình vẫn đang trong quá trình học.
 
-### 7. Cảm nhận cá nhân
-
-Điểm tôi quan tâm nhất trong buổi Mini Meeting là cách các diễn giả trình bày những vấn đề thực tế phía sau một ứng dụng AI.
-
-Trước đây, khi tìm hiểu về AI, tôi thường tập trung nhiều vào mô hình. Tuy nhiên, qua các ví dụ về Voice AI và AI Agent, tôi thấy rằng một hệ thống còn cần nhiều thành phần khác để có thể hoạt động hiệu quả.
-
-Một số nội dung như AWS RAM hay AgentCore Memory vẫn còn mới đối với tôi. Vì vậy, tôi cần tiếp tục đọc tài liệu và tìm hiểu thêm để nắm rõ cách sử dụng.
-
-Nhìn chung, sự kiện giúp tôi mở rộng kiến thức về AI và AWS, đồng thời có thêm định hướng cho việc học tập và phát triển dự án.
+Sau sự kiện, tôi có thêm một số chủ đề muốn tìm hiểu và cũng nhận ra rằng để xây dựng một ứng dụng tốt, ngoài lập trình còn cần kiến thức về dữ liệu, bảo mật và vận hành hệ thống.
 
 ### 8. Một số hình ảnh của sự kiện
 
-Dưới đây là năm hình ảnh tư liệu được lưu lại từ sự kiện FCAJ Mini Meeting.
+Dưới đây là một số hình ảnh được lưu lại từ buổi FCAJ Mini Meeting.
 
 #### Hình ảnh 1
 
@@ -192,10 +150,12 @@ Dưới đây là năm hình ảnh tư liệu được lưu lại từ sự ki�
 
 ![Hình ảnh 5 tại FCAJ Mini Meeting](picture_event_3/5.jpg)
 
-### Tổng kết
 
-Buổi **FCAJ Mini Meeting ngày 24/10/2026** giúp tôi tiếp cận thêm những nội dung về Voice AI, quản lý tài nguyên AWS, bảo mật ứng dụng và kiến trúc AI Agent.
 
-Trong đó, tôi đặc biệt quan tâm đến cách các hệ thống AI được kết hợp từ nhiều thành phần như xử lý dữ liệu, mô hình, API, Memory và các quy trình nghiệp vụ.
+Tổng kết
 
-Những kiến thức được chia sẻ giúp tôi hiểu rõ hơn rằng việc phát triển ứng dụng AI không chỉ tập trung vào AI model mà còn cần quan tâm đến thiết kế hệ thống, quản lý dữ liệu và khả năng vận hành trong thực tế.
+Buổi FCAJ Mini Meeting ngày 24/10/2026 giúp tôi biết thêm về Voice AI, quản lý tài nguyên AWS, bảo mật ứng dụng và AI Agent.
+
+Điều tôi nhớ nhất là một ứng dụng AI thực tế cần nhiều thành phần phối hợp để hoạt động hiệu quả. Ngoài mô hình AI, người phát triển còn phải quan tâm đến cách xử lý dữ liệu, kết nối hệ thống và kiểm tra kết quả.
+
+Tôi xem đây là một buổi học bổ ích, giúp mình mở rộng kiến thức và có thêm hướng tìm hiểu trong quá trình học AWS cũng như phát triển dự án LoveSpot.

@@ -8,237 +8,88 @@ pre: " <b> 4.1. </b> "
 
 ### Giới thiệu sự kiện
 
-Ngày **26/09/2026**, tôi theo dõi buổi **FCAJ Buildrathon Kickoff** thuộc chương trình First Cloud AI Journey, được tổ chức tại văn phòng AWS ở TP.HCM.
+Ngày **26/09/2026**, tôi có dịp theo dõi sự kiện **FCAJ Buildrathon Kickoff** thuộc chương trình **First Cloud AI Journey**.
 
-Buổi sự kiện gồm những nội dung chính:
+Đây là một trong những hoạt động đầu tiên giúp tôi hiểu rõ hơn về chương trình cũng như những gì các thành viên sẽ thực hiện trong thời gian tới. Buổi kickoff không chỉ giới thiệu về lộ trình học tập mà còn có những phần chia sẻ liên quan đến công nghệ, AI và việc xây dựng các ứng dụng trong thực tế.
 
-- Giới thiệu chương trình First Cloud AI Journey (FCAJ).
-- Khởi động hoạt động Buildrathon.
-- Giới thiệu và giao lưu cùng CMC Global.
-- Chia sẻ của anh Trường về dự án chatbot hỗ trợ công việc.
-- Giới thiệu kiến trúc của Market Slack Bot.
+Trước sự kiện, tôi chủ yếu tìm hiểu AWS thông qua tài liệu và các bài học cơ bản. Vì vậy, tôi khá mong chờ được nghe thêm những câu chuyện thực tế về cách mọi người sử dụng công nghệ để giải quyết vấn đề.
 
-Thông qua các phần trình bày, tôi có cơ hội tìm hiểu thêm về chương trình FCAJ và cách một ứng dụng AI được xây dựng để giải quyết những vấn đề trong công việc thực tế.
+### 1. Tìm hiểu về chương trình FCAJ và Buildrathon
 
-### 1. Giới thiệu về First Cloud AI Journey
+Phần đầu của buổi kickoff tập trung giới thiệu chương trình First Cloud AI Journey và các hoạt động dành cho người tham gia.
 
-Phần đầu tiên của sự kiện tập trung giới thiệu tổng quan về chương trình **First Cloud AI Journey (FCAJ)**.
+Qua phần này, tôi hiểu thêm về mục tiêu học tập và cách các nhóm sẽ làm việc trong Buildrathon. Bên cạnh việc tự học các dịch vụ AWS, người tham gia còn cần dành thời gian tìm hiểu một bài toán cụ thể, lựa chọn hướng giải quyết và xây dựng sản phẩm của nhóm.
 
-Nội dung trình bày giúp các thành viên hiểu rõ hơn về mục tiêu chương trình, cách thức tham gia cũng như những hoạt động dự kiến trong thời gian tới.
+Tôi thấy đây là một điểm khá thú vị của chương trình. Khi học một dịch vụ AWS riêng lẻ, đôi lúc tôi chỉ nhớ được chức năng của nó. Nhưng khi làm dự án, tôi sẽ cần suy nghĩ xem dịch vụ đó có thực sự phù hợp hay không và nên sử dụng trong trường hợp nào.
 
-Qua phần này, tôi có cái nhìn rõ ràng hơn về lộ trình học tập và hoạt động phát triển dự án trong Buildrathon.
+Buổi kickoff cũng giúp tôi có cái nhìn rõ hơn về những công việc mình cần chuẩn bị trong các tuần tiếp theo.
 
-### 2. Kickoff Buildrathon
+### 2. Những chia sẻ về ứng dụng AI trong thực tế
 
-Tiếp theo là phần khởi động chính thức của **Buildrathon**.
+Một phần khác khiến tôi quan tâm là nội dung chia sẻ về việc sử dụng AI để hỗ trợ công việc.
 
-Ban tổ chức giới thiệu về hoạt động Buildrathon và cách các nhóm sẽ tham gia phát triển dự án trong khuôn khổ chương trình.
+Thông qua những ví dụ được giới thiệu, tôi có thêm góc nhìn về cách một ứng dụng AI được xây dựng để phục vụ một nhu cầu cụ thể. Thay vì chỉ tạo ra một chatbot có khả năng trả lời câu hỏi, người phát triển còn phải quan tâm đến việc ứng dụng đó được dùng ở đâu và có giúp người dùng giải quyết vấn đề hay không.
 
-Phần này giúp tôi hiểu thêm về định hướng của Buildrathon, đặc biệt là việc vận dụng kiến thức đã học để xây dựng những sản phẩm giải quyết bài toán thực tế.
+Tôi nhận thấy có khá nhiều điều cần xem xét trước khi bắt đầu làm một ứng dụng AI, chẳng hạn như mục tiêu sử dụng, dữ liệu đầu vào, cách xử lý thông tin và kết quả mà người dùng mong muốn nhận được.
 
-### 3. Giới thiệu và giao lưu cùng CMC Global
+Đối với tôi, đây là những vấn đề đáng tìm hiểu vì trước đó tôi thường chú ý nhiều hơn đến khả năng của AI model mà ít quan tâm đến toàn bộ quá trình xây dựng một sản phẩm.
 
-Một nội dung khác trong buổi kickoff là phần giới thiệu từ **CMC Global**.
+### 3. Góc nhìn về việc xây dựng một dự án
 
-Đại diện công ty chia sẻ một số thông tin về đơn vị và tham gia các hoạt động giao lưu với thành viên của chương trình.
+Sau khi theo dõi các phần chia sẻ, tôi suy nghĩ nhiều hơn về cách bắt đầu một dự án công nghệ.
 
-Buổi sự kiện cũng có phần tặng quà dành cho người tham gia, góp phần tạo không khí gần gũi và sôi nổi.
+Theo tôi, một điều quan trọng là cần xác định rõ vấn đề trước khi lựa chọn công nghệ. Nếu chưa hiểu người dùng cần gì, việc bổ sung nhiều tính năng hoặc sử dụng những công cụ mới chưa chắc đã giúp sản phẩm tốt hơn.
 
-Thông qua phần này, tôi biết thêm về CMC Global và những hoạt động kết nối giữa doanh nghiệp với cộng đồng học tập công nghệ.
+Tôi cũng thấy việc chia công việc thành những phần nhỏ sẽ giúp quá trình phát triển dễ theo dõi hơn. Một nhóm có thể tập trung vào giao diện, nhóm khác xử lý dữ liệu hoặc xây dựng các chức năng phía sau. Tuy nhiên, các thành phần vẫn cần kết nối được với nhau để tạo thành một ứng dụng hoàn chỉnh.
 
-### 4. Chia sẻ của anh Trường về dự án chatbot
+Những điều này tuy khá cơ bản nhưng tôi nghĩ sẽ rất cần thiết khi bắt đầu tham gia một dự án nhóm.
 
-Một trong những nội dung tôi quan tâm nhất là phần anh Trường giới thiệu về một dự án chatbot được xây dựng để hỗ trợ quá trình làm việc giữa các nhóm.
+### 4. Những điều tôi học được sau sự kiện
 
-Theo tình huống được chia sẻ, dự án có hai nhóm làm việc tại những địa điểm khác nhau:
+Sau buổi FCAJ Buildrathon Kickoff, tôi ghi lại một số điều mà bản thân thấy hữu ích:
 
-- **Business Analyst (BA):** Làm việc ở nước ngoài.
-- **Engineer:** Làm việc tại Việt Nam.
+- Hiểu thêm về mục tiêu và các hoạt động trong chương trình First Cloud AI Journey.
+- Có cái nhìn rõ hơn về việc kết hợp kiến thức AWS với quá trình xây dựng dự án.
+- Biết thêm một số cách ứng dụng AI để hỗ trợ xử lý công việc.
+- Nhận ra rằng cần hiểu vấn đề của người dùng trước khi chọn giải pháp kỹ thuật.
+- Thấy được tầm quan trọng của việc phân chia công việc và trao đổi thông tin trong nhóm.
 
-Do khoảng cách địa lý và sự khác biệt trong cách phối hợp, quá trình trao đổi yêu cầu, cập nhật thông tin và xử lý vấn đề có thể gặp những khó khăn nhất định.
+Điều tôi nhớ nhất là một sản phẩm công nghệ không nhất thiết phải sử dụng những công cụ phức tạp mới có giá trị. Quan trọng hơn là sản phẩm giải quyết được vấn đề gì và có phù hợp với người sử dụng hay không.
 
-Từ nhu cầu thực tế đó, nhóm phát triển đã xây dựng một **Triage Bot** nhằm hỗ trợ tiếp nhận, phân loại và xử lý thông tin trao đổi giữa các bên.
+Tôi muốn ghi nhớ điều này trong quá trình học AWS và tham gia phát triển dự án của mình.
 
-Điều khiến tôi chú ý là chatbot được xây dựng từ một vấn đề cụ thể trong quy trình làm việc, thay vì chỉ nhằm mục đích thử nghiệm công nghệ AI.
+### 5. Một số hình ảnh của sự kiện
 
-### 5. Triage Bot và cách định nghĩa vai trò của AI
+Dưới đây là một số hình ảnh liên quan đến buổi **FCAJ Buildrathon Kickoff**.
 
-**Triage Bot** được giới thiệu như một công cụ hỗ trợ xử lý thông tin trong quá trình trao đổi giữa các nhóm.
+**Không gian sự kiện**
 
-Trong phần demo, tôi được xem cách nhóm phát triển định nghĩa hành vi và phạm vi hoạt động của bot thông qua file `SOUL.md`.
+![Không gian FCAJ Buildrathon Kickoff](picture_event_1/background.jpg)
 
-Một số thành phần được đề cập trong file gồm:
+*Hình ảnh không gian tổ chức sự kiện.*
 
-- **Identity:** Xác định danh tính và vai trò của bot.
-- **Expertise:** Mô tả chuyên môn mà bot cần có.
-- **Tone & Style:** Quy định cách thức giao tiếp và phản hồi.
-- **Skills Used:** Xác định các kỹ năng hoặc công cụ được sử dụng.
-- **Domain-specific Protocols:** Quy tắc xử lý trong lĩnh vực cụ thể.
-- **Anti-patterns:** Những hành vi hoặc cách xử lý cần tránh.
-- **Out of Scope:** Các nhiệm vụ nằm ngoài phạm vi hoạt động.
+**Phần trình bày tại sự kiện**
 
-Điểm tôi thấy thú vị là bot không được thiết kế để trả lời tất cả mọi yêu cầu.
+![Phần chia sẻ tại FCAJ](picture_event_1/demo_project.jpg)
 
-Thay vào đó, nhóm phát triển xác định rõ bot có nhiệm vụ gì, được phép thực hiện những công việc nào và khi nào không nên đưa ra phản hồi.
+*Một trong những nội dung được chia sẻ trong chương trình.*
 
-Qua phần này, tôi hiểu rằng việc xây dựng một chatbot không chỉ phụ thuộc vào AI model. Việc định nghĩa **vai trò, phạm vi, quy tắc hoạt động và cách phản hồi** cũng rất quan trọng để hệ thống đáp ứng đúng nhu cầu sử dụng.
+**Giới thiệu hoạt động Buildrathon**
 
-### 6. Kiến trúc của Market Slack Bot
+![Hoạt động Buildrathon](picture_event_1/buildhackathon.jpg)
 
-Trong phần trình bày, tôi được giới thiệu kiến trúc tổng quan của **Market Slack Bot**.
+*Hình ảnh liên quan đến phần giới thiệu Buildrathon.*
 
-Luồng xử lý chính được minh họa như sau:
+**Hình ảnh cuối buổi**
 
-**Slack → Socket Mode → Response Gate → Claude Code**
+![Hình ảnh cuối sự kiện](picture_event_1/end.jpg)
 
-Bên cạnh luồng chính, hệ thống còn có những thành phần hỗ trợ như:
+*Một số hình ảnh ghi lại trong buổi kickoff.*
 
-- `SOUL.md`
-- Memory
-- `bot-schedule`
-- Internal API
-- Cron và Database
+### 6. Cảm nhận và tổng kết
 
-#### Socket Mode
+Nhìn chung, **FCAJ Buildrathon Kickoff** là một buổi chia sẻ hữu ích đối với tôi trong giai đoạn bắt đầu chương trình.
 
-Socket Mode sử dụng kết nối WebSocket để ứng dụng có thể nhận các sự kiện và tương tác với Slack.
+Tôi không chỉ hiểu thêm về những hoạt động sắp tới mà còn có cơ hội nhìn nhận việc học công nghệ theo một hướng thực tế hơn. Thay vì chỉ cố gắng học thật nhiều dịch vụ hoặc công cụ, tôi nghĩ mình cần biết cách sử dụng những kiến thức đó vào một công việc cụ thể.
 
-#### Response Gate
-
-Response Gate nằm trước phần xử lý của bot.
-
-Theo cách tôi hiểu từ phần trình bày, thành phần này giúp kiểm soát những trường hợp bot cần phản hồi, thay vì xử lý và trả lời mọi tin nhắn xuất hiện trong hệ thống.
-
-#### SOUL.md
-
-File `SOUL.md` được sử dụng để xác định vai trò, cách giao tiếp, các quy tắc và phạm vi hoạt động của bot.
-
-#### Memory
-
-Memory hỗ trợ lưu giữ ngữ cảnh của những cuộc trao đổi.
-
-Nhờ đó, bot có thể tham khảo thông tin từ các tin nhắn trước trong cùng một luồng hội thoại, thay vì xem mỗi yêu cầu là một nội dung hoàn toàn độc lập.
-
-#### Bot Schedule
-
-Thành phần `bot-schedule` hỗ trợ các hoạt động hoặc công việc được lên lịch trước.
-
-#### Internal API
-
-Internal API phục vụ quá trình trao đổi và xử lý một số tác vụ bên trong ứng dụng.
-
-#### Cron và Database
-
-Cron và Database hỗ trợ lưu trữ thông tin, quản lý dữ liệu cần thiết và thực hiện các công việc theo lịch.
-
-Qua phần kiến trúc, tôi thấy rằng một chatbot hoạt động trong môi trường thực tế cần có nhiều thành phần phối hợp, không chỉ đơn giản là gửi yêu cầu đến AI model rồi nhận kết quả.
-
-### 7. Cách lựa chọn thành phần khi thiết kế hệ thống
-
-Trong phần trình bày có một câu khiến tôi chú ý:
-
-> "Each piece answered a question I actually faced."
-
-Theo cách tôi hiểu, mỗi thành phần của hệ thống nên xuất hiện để giải quyết một vấn đề cụ thể mà nhóm phát triển gặp phải.
-
-Đối với kiến trúc Market Slack Bot, các thành phần có những vai trò khác nhau:
-
-- **Slack:** Nơi người dùng trao đổi và gửi yêu cầu.
-- **Socket Mode:** Hỗ trợ kết nối với Slack.
-- **Response Gate:** Kiểm soát thời điểm bot cần phản hồi.
-- **SOUL.md:** Xác định vai trò và giới hạn hoạt động.
-- **Memory:** Lưu giữ ngữ cảnh hội thoại.
-- **Internal API:** Hỗ trợ xử lý những tác vụ nội bộ.
-- **Cron và Database:** Phục vụ lưu trữ và thực hiện công việc theo lịch.
-
-Bài học tôi rút ra là không nên bổ sung công nghệ vào hệ thống chỉ vì công nghệ đó phổ biến. Trước tiên cần hiểu vấn đề, sau đó mới lựa chọn thành phần phù hợp để giải quyết.
-
-### 8. Góc nhìn về một ứng dụng AI thực tế
-
-Phần giới thiệu Triage Bot giúp tôi có thêm góc nhìn về cách một ứng dụng AI được tổ chức.
-
-Trước đây, khi nghĩ đến chatbot, tôi thường tập trung vào AI model và API dùng để gửi yêu cầu.
-
-Tuy nhiên, thông qua phần chia sẻ, tôi nhận thấy hệ thống thực tế còn cần nhiều yếu tố khác như:
-
-- Phạm vi và nhiệm vụ của bot.
-- Quản lý ngữ cảnh hội thoại.
-- Memory để lưu giữ thông tin.
-- API kết nối các thành phần.
-- Database phục vụ lưu trữ.
-- Cơ chế thực hiện tác vụ theo lịch.
-- Quy tắc kiểm soát phản hồi.
-
-Những thành phần này giúp ứng dụng AI hoạt động phù hợp hơn với quy trình làm việc của người sử dụng.
-
-### 9. Hoạt động kết nối và chia sẻ tại sự kiện
-
-Bên cạnh những nội dung kỹ thuật, buổi kickoff còn có các hoạt động giới thiệu và kết nối trong cộng đồng First Cloud AI Journey.
-
-Phần chia sẻ từ CMC Global và ví dụ thực tế về dự án chatbot giúp tôi có thêm góc nhìn về môi trường phát triển phần mềm và cách những nhóm có trách nhiệm khác nhau phối hợp để giải quyết công việc.
-
-Đặc biệt, tình huống BA làm việc ở nước ngoài và Engineer làm việc tại Việt Nam cho thấy tầm quan trọng của việc trao đổi thông tin rõ ràng trong quá trình phát triển sản phẩm.
-
-### 10. Những kiến thức học được
-
-Sau khi theo dõi sự kiện, tôi tổng hợp được một số nội dung đáng chú ý:
-
-- Hiểu rõ hơn về mục tiêu của FCAJ và hoạt động Buildrathon.
-- Biết thêm về CMC Global và các hoạt động giao lưu trong chương trình.
-- Có thêm góc nhìn về cách các nhóm phối hợp khi phát triển dự án.
-- Hiểu được một số khó khăn trong việc trao đổi giữa BA và Engineer làm việc ở những địa điểm khác nhau.
-- Biết cách Triage Bot được sử dụng để hỗ trợ xử lý và phân loại thông tin.
-- Hiểu thêm vai trò của `SOUL.md` trong việc định nghĩa hành vi của chatbot.
-- Nhận biết tầm quan trọng của Memory và Context đối với những cuộc hội thoại.
-- Tìm hiểu được kiến trúc cơ bản của một bot tích hợp với Slack.
-- Nhận ra rằng một AI application cần nhiều thành phần hỗ trợ bên cạnh AI model.
-
-### 11. Bài học rút ra
-
-Nội dung tôi nhớ nhất sau buổi kickoff là phần chia sẻ về **Triage Bot và kiến trúc Market Slack Bot**.
-
-Từ một khó khăn trong quá trình làm việc giữa BA và Engineer, nhóm phát triển đã xây dựng giải pháp chatbot để hỗ trợ trao đổi và xử lý thông tin.
-
-Qua đó, tôi nhận thấy việc phát triển một ứng dụng AI nên bắt đầu bằng cách xác định vấn đề thực tế, sau đó lựa chọn mô hình và kiến trúc phù hợp.
-
-Tôi cũng hiểu thêm rằng một hệ thống AI cần có sự kết hợp giữa nhiều thành phần như Model, Memory, API, Database, Context và cơ chế kiểm soát phản hồi.
-
-Đây là những kiến thức hữu ích để tôi tham khảo khi tiếp tục tìm hiểu và xây dựng các ứng dụng AI trong tương lai.
-
-### 12. Một số hình ảnh của sự kiện
-
-Dưới đây là những hình ảnh tư liệu liên quan đến buổi FCAJ Buildrathon Kickoff.
-
-#### Không gian buổi kickoff
-
-![Không gian tại buổi FCAJ Buildrathon Kickoff](picture_event_1/background.jpg)
-
-*Hình ảnh ghi lại không gian và hoạt động trong buổi kickoff.*
-
-#### Phần giới thiệu và demo dự án
-
-![Phần trình bày về dự án chatbot](picture_event_1/demo_project.jpg)
-
-*Hình ảnh tư liệu liên quan đến phần chia sẻ và minh họa dự án.*
-
-#### FCAJ Buildrathon Kickoff
-
-![Nội dung khởi động Buildrathon](picture_event_1/buildhackathon.jpg)
-
-*Hình ảnh giới thiệu hoạt động Buildrathon trong chương trình.*
-
-#### Kết thúc buổi sự kiện
-
-![Hình ảnh cuối buổi sự kiện](picture_event_1/end.jpg)
-
-*Hình ảnh tư liệu phần cuối buổi kickoff.*
-
-### Tổng kết
-
-Buổi **FCAJ Buildrathon Kickoff ngày 26/09/2026** giúp tôi hiểu rõ hơn về chương trình First Cloud AI Journey và định hướng hoạt động Buildrathon.
-
-Trong các nội dung được trình bày, phần giới thiệu về **Triage Bot và kiến trúc Market Slack Bot** để lại cho tôi nhiều ấn tượng nhất.
-
-Thông qua ví dụ này, tôi hiểu thêm rằng một ứng dụng AI không chỉ cần mô hình trí tuệ nhân tạo mà còn phải có các thành phần hỗ trợ và cơ chế xử lý phù hợp với nhu cầu thực tế.
-
-Những kiến thức từ buổi chia sẻ là cơ sở để tôi tiếp tục tìm hiểu về thiết kế hệ thống và phát triển ứng dụng AI trong quá trình học tập.
+Buổi kickoff cũng khiến tôi có thêm hứng thú với việc xây dựng dự án cùng nhóm. Tôi hy vọng những kiến thức và kinh nghiệm tìm hiểu được trong chương trình sẽ giúp mình cải thiện kỹ năng lập trình, làm việc nhóm và thiết kế ứng dụng trong thời gian tới.

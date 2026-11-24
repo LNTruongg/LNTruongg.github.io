@@ -13,6 +13,7 @@ pre: " <b> 1.3. </b> "
 - Tìm hiểu các loại S3 Storage Classes và cách lựa chọn phù hợp.
 - Tìm hiểu cách quản lý dữ liệu tự động bằng S3 Lifecycle.
 - Tìm hiểu cách tạo một website tĩnh đơn giản bằng Amazon S3.
+- Bước đầu tìm hiểu yêu cầu và định hướng phát triển dự án LoveSpot.
 
 ### Các công việc cần triển khai trong tuần này:
 
@@ -23,7 +24,7 @@ pre: " <b> 1.3. </b> "
 | 4 | Tìm hiểu các loại S3 Storage Classes và sự khác nhau giữa S3 Standard, Standard-IA và Glacier. | 30/09/2026 | 30/09/2026 | [S3 Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html) |
 | 5 | Tìm hiểu S3 Lifecycle và cách tự động chuyển hoặc xóa file sau một khoảng thời gian. | 01/10/2026 | 01/10/2026 | [S3 Lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html) |
 | 6 | Tìm hiểu S3 Static Website Hosting và thực hành upload các file HTML của website tĩnh lên S3. | 02/10/2026 | 02/10/2026 | [S3 Website Hosting](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html) |
-| 7 | Ôn tập kiến thức đã học, kiểm tra và xóa các tài nguyên AWS không còn sử dụng. | 03/10/2026 | 03/10/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| 7 | Ôn tập kiến thức AWS đã học, kiểm tra và xóa các tài nguyên không còn sử dụng. Làm dự án: tìm hiểu yêu cầu ban đầu và các chức năng dự kiến của LoveSpot. | 03/10/2026 | 03/10/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
 
 ### Kết quả đạt được tuần 3:
 
@@ -42,7 +43,14 @@ pre: " <b> 1.3. </b> "
 - Upload file HTML lên S3 và tìm hiểu cách cấu hình Static Website Hosting.
 - Kiểm tra và xóa các tài nguyên không còn sử dụng để hạn chế chi phí.
 
+**Hoạt động dự án LoveSpot:**
+
+- Bước đầu tìm hiểu ý tưởng xây dựng LoveSpot, ứng dụng hỗ trợ gợi ý địa điểm ăn uống và tạo lịch trình tại TP. Hồ Chí Minh.
+- Xác định một số chức năng dự kiến như tìm kiếm địa điểm, đưa ra gợi ý phù hợp với nhu cầu và hỗ trợ người dùng lập lịch trình.
+- Tìm hiểu sơ bộ cách tổ chức thông tin địa điểm ăn uống để phục vụ việc xây dựng hệ thống gợi ý trong các giai đoạn tiếp theo.
+
 **Khó khăn gặp phải:**
+
 - Mất khá nhiều thời gian để tìm hiểu các loại S3 Storage Classes vì có nhiều loại với chức năng và chi phí khác nhau.
 - Khi thực hành S3 Static Website Hosting, ban đầu chưa truy cập được website do chưa cấu hình đúng quyền truy cập Bucket.
-
+- Đối với LoveSpot, cần tiếp tục tìm hiểu cách tổ chức dữ liệu địa điểm và xác định phạm vi chức năng phù hợp trước khi bắt đầu phát triển các thành phần chính.

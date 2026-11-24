@@ -1,4 +1,3 @@
-
 ---
 title: "Worklog Tuần 4"
 date: 2026-10-05
@@ -14,6 +13,7 @@ pre: " <b> 1.4. </b> "
 - Hiểu vai trò của Route Table, Internet Gateway và NAT Gateway.
 - Phân biệt Security Group và Network ACL trong việc kiểm soát lưu lượng mạng.
 - Tìm hiểu sơ lược VPC Endpoint, VPC Peering và luyện tập thiết kế sơ đồ VPC đơn giản.
+- Tiếp tục tìm hiểu dự án LoveSpot, tập trung vào luồng sử dụng ứng dụng và cách tổ chức các thành phần chính.
 
 ### Các công việc cần triển khai trong tuần này:
 
@@ -24,7 +24,7 @@ pre: " <b> 1.4. </b> "
 | 4 | Tìm hiểu cách NAT Gateway hỗ trợ tài nguyên trong Private Subnet truy cập Internet. Đọc tài liệu về chi phí NAT Gateway và chỉ phân tích sơ đồ, không tạo tài nguyên này. | 07/10/2026 | 07/10/2026 | [NAT Devices](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat.html), [NAT Gateway Pricing](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-pricing.html) |
 | 5 | Ôn lại Security Group từ tuần 1, tìm hiểu Network ACL. So sánh phạm vi áp dụng, Allow/Deny Rules và cơ chế Stateful/Stateless. | 08/10/2026 | 08/10/2026 | [Security Groups](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html), [Network ACLs](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html) |
 | 6 | Tìm hiểu VPC Endpoint và VPC Peering ở mức cơ bản. Phân biệt S3 Gateway Endpoint với Interface Endpoint, đồng thời đọc lưu ý về chi phí và truyền dữ liệu giữa các VPC. | 09/10/2026 | 09/10/2026 | [S3 Gateway Endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints-s3.html), [VPC Peering](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-peering.html) |
-| 7 | Ôn tập kiến thức trong tuần và luyện tập phác thảo sơ đồ VPC bằng draw.io với Public Subnet, Private Subnet, Route Table và các thành phần kết nối được minh họa. Không triển khai EC2, NAT Gateway hoặc các tài nguyên có thể phát sinh phí. | 10/10/2026 | 10/10/2026 | [AWS VPC Examples]( https://docs.aws.amazon.com/vpc/latest/userguide/vpc-examples-intro.html) |
+| 7 | Ôn tập kiến thức AWS và phác thảo sơ đồ VPC bằng draw.io với Public Subnet, Private Subnet, Route Table và các thành phần kết nối. Không triển khai tài nguyên có nguy cơ phát sinh phí. **Làm dự án:** Tiếp tục tìm hiểu LoveSpot, phác thảo luồng người dùng từ tìm kiếm địa điểm, nhận gợi ý đến tạo lịch trình. | 10/10/2026 | 10/10/2026 | [AWS VPC Examples](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-examples-intro.html) |
 
 ### Kết quả đạt được tuần 4:
 
@@ -44,7 +44,14 @@ pre: " <b> 1.4. </b> "
 - So sánh Security Group với Network ACL bằng các tình huống truy cập cơ bản, chẳng hạn cho phép SSH hoặc HTTP.
 - Tìm hiểu chi phí trước khi thực hành: không tạo NAT Gateway, Interface Endpoint, EC2 hay Public IPv4 trong nội dung tuần này để tránh phát sinh phí ngoài dự kiến.
 
+**Hoạt động dự án LoveSpot:**
+
+- Tiếp tục tìm hiểu hướng phát triển LoveSpot, ứng dụng gợi ý địa điểm ăn uống và hỗ trợ tạo lịch trình tại TP. Hồ Chí Minh.
+- Phác thảo luồng sử dụng cơ bản: người dùng cung cấp nhu cầu hoặc sở thích, hệ thống đề xuất những địa điểm phù hợp và hỗ trợ sắp xếp thành lịch trình.
+- Bước đầu phân chia các thành phần dự kiến của ứng dụng, gồm giao diện người dùng, Backend xử lý yêu cầu và hệ thống gợi ý địa điểm.
+- Từ kiến thức VPC đã học, tìm hiểu sơ bộ cách phân tách các thành phần hệ thống trong một kiến trúc Cloud. Đây mới là bước tìm hiểu và định hướng, chưa triển khai hạ tầng AWS cho LoveSpot.
+
 **Khó khăn gặp phải và cách giải quyết:**
 
-- Ban đầu khó phân biệt Public Subnet và Private Subnet vì cả hai đều thuộc cùng một VPC. Sau khi xem lại Route Table và sơ đồ Internet Gateway, đã hiểu rõ hơn vai trò của đường định tuyến trong việc xác định loại Subnet.
-- Dễ nhầm Security Group với Network ACL vì cả hai đều kiểm soát lưu lượng mạng. Việc so sánh Stateful/Stateless và phạm vi áp dụng giúp phân biệt hai cơ chế này rõ ràng hơn.
+- Ban đầu khó phân biệt Public Subnet và Private Subnet vì cả hai đều thuộc cùng một VPC. Sau khi xem lại Route Table và sơ đồ Internet Gateway, tôi hiểu rõ hơn vai trò của đường định tuyến trong việc xác định loại Subnet.
+- Dễ nhầm Security Group với Network ACL vì cả hai đều kiểm soát lưu lượng mạng. Việc so sánh Stateful/Stateless và phạm vi áp dụng giúp tôi phân biệt hai cơ chế này rõ ràng hơn.

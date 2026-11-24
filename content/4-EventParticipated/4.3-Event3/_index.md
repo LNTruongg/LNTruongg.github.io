@@ -1,201 +1,160 @@
----
-title: "Event 3 - FCAJ Mini Meeting"
-date: 2026-10-24
-weight: 3
-chapter: false
-pre: " <b> 4.3. </b> "
----
+Event Introduction
 
-### Event Introduction
+On October 24, 2026, I attended the FCAJ Mini Meeting, an event organized within the First Cloud AI Journey community.
 
-On **October 24, 2026**, I attended the **FCAJ Mini Meeting**, a technical knowledge-sharing event organized within the First Cloud AI Journey community.
+The meeting included presentations about Vietnamese Voice AI, AWS Resource Access Manager (RAM), AWS Security Agent, and Amazon Bedrock AgentCore.
 
-The meeting covered several topics related to artificial intelligence and cloud computing, including **Vietnamese Voice AI**, **AWS Resource Access Manager (RAM)**, **AWS Security Agent**, and **Amazon Bedrock AgentCore**.
+Most of these topics were quite new to me. Besides learning basic AWS services, I wanted to understand how these technologies could be used in developing and managing real applications.
 
-Through the presentations, I had an opportunity to learn more about how these technologies can be used in real-world systems. This report summarizes my understanding based on my notes and the presentation materials from the event.
+Event Information
 
-### Event Information
+Event Name: FCAJ Mini Meeting.
 
-- **Event Name:** FCAJ Mini Meeting.
-- **Date:** October 24, 2026.
-- **Role:** Attendee.
-- **Main Topics:** Voice AI, AWS RAM, AWS Security Agent, and Amazon Bedrock AgentCore.
+Date: October 24, 2026.
 
-### 1. Hear, Think, Speak — Building Vietnamese Voice AI
+Role: Participant.
 
-**Kiet Tran**, an AI Engineer at Revve AI, presented **Hear, Think, Speak: Building a Vietnamese Voice-AI Contact Center on AWS**.
+Main Topics: Voice AI, AWS RAM, AWS Security Agent, and Amazon Bedrock AgentCore.
 
-The session introduced how voice-based AI systems can be developed for applications such as customer service contact centers and interviews.
+1. Hear, Think, Speak — Building Vietnamese Voice AI
 
-One point I found interesting was that a Voice AI system needs more than accurate answers. It must also detect when a user has finished speaking, process the request, and respond with sufficiently low latency to maintain a natural conversation.
+The first topic I was interested in was Hear, Think, Speak: Building a Vietnamese Voice-AI Contact Center on AWS.
 
-#### Three Approaches to Building Voice Agents
+This presentation introduced how AI systems can listen, understand, and respond through speech. One example is an automated contact center that can communicate with customers.
 
-The presentation introduced three approaches:
+Before this, I usually interacted with AI by typing questions and receiving text responses. Voice AI is more complicated because the system also needs to recognize speech, understand the message, and generate spoken responses.
 
-- **Cascade:** Divides processing into ASR → LLM → TTS. Speech is converted into text, processed by a language model, and then transformed into a spoken response.
-- **Speech-to-Speech (S2S):** Uses a speech model to process audio inputs and generate audio outputs.
-- **Full Duplex S2S:** Aims to support simultaneous listening and speaking, creating a more natural conversational experience.
+Different approaches to voice processing
 
-According to the presentation, the development team continued using **Cascade in production** while experimenting with Speech-to-Speech approaches.
+I learned about several approaches:
 
-For their Vietnamese-language use case, Cascade offered flexibility in selecting individual components and controlling responses through an intermediate text-processing stage.
+Cascade: Converts speech into text, processes it using AI, and turns the response back into audio.
 
-This session helped me understand that Voice AI architecture should be selected according to practical requirements, including speech quality, response latency, logging, and the ability to improve individual components.
+Speech-to-Speech: Uses models that can process audio input and generate audio output.
 
-#### Call Processing and AWS Architecture
+Full Duplex: Aims to support more natural conversations by allowing flexible listening and speaking.
 
-The architecture slides introduced several components working together:
+What I found interesting was that Voice AI needs more than accurate answers. Response speed also matters because long delays can make a conversation feel unnatural.
 
-- SIP Server and Media Server.
-- Noise Cancellation.
-- Turn Detection.
-- Speech-to-Text.
-- LLM with a Flow Engine.
-- Text-to-Speech.
+This session helped me understand that developing a voice-based AI application involves several processing steps rather than just one AI model.
 
-The presentation also described Revve's deployment architecture within a single AWS Region and the customer's AWS account.
+2. AWS Resource Access Manager — Sharing AWS Resources
 
-In addition, the speaker shared a proof of concept for a Vietnamese bank. The workflow involved receiving requests, verifying information, identifying user intent, and handling requests through APIs or transferring them to human agents.
+The next topic was AWS Resource Access Manager (AWS RAM).
 
-This example helped me realize that a real-world Voice AI application requires both AI technologies and well-designed business workflows.
+When I first started learning AWS, I mostly worked with a single account, so I had not thought much about managing resources across multiple AWS accounts.
 
-### 2. AWS Resource Access Manager — Cross-Account Resource Sharing
+Through this presentation, I learned that AWS RAM supports sharing certain AWS resources between accounts. This can be useful for organizations with different teams or departments.
 
-**Long Huynh** presented **AWS Resource Access Manager (AWS RAM)**.
+One thing I remembered was that resource sharing should always involve proper access management. Not every account should be allowed to use every resource.
 
-The session began by discussing the challenges organizations face when managing multiple AWS accounts and sharing resources between them.
+Although I had not practiced using AWS RAM, this topic gave me a better understanding of how companies can organize their cloud environments.
 
-The main topics included:
+3. AWS Security Agent — Web Application Security
 
-- **Multi-account Challenge:** Difficulties in organizing and managing resources across multiple AWS accounts.
-- **AWS RAM:** An introduction to the service and its resource-sharing capabilities.
-- **Resource Share:** Defining shared resources, recipients, and permissions.
-- **Sharing Workflow:** Understanding the process of sharing resources between AWS accounts.
-- **Regions and Availability Zone IDs:** Important considerations regarding resource scope and deployment locations.
-- **RAM in a Landing Zone:** How resource sharing can support enterprise AWS environments.
+Another topic was AWS Security Agent and how AI can support application security reviews.
 
-According to my notes, the speaker also mentioned that AWS RAM supports resource sharing across more than 40 AWS services.
+When working on a website, I usually focus on the interface and main features first. Security is sometimes something I think about only when the application is nearly finished.
 
-My main takeaway was that organizations need to clearly identify **which resources are shared, which accounts can access them, and what permissions are granted**.
+This presentation made me realize that security should be considered earlier, even during the system design stage.
 
-This session gave me an initial understanding of managing AWS infrastructure across multiple accounts rather than working with individual services in a single account.
+For example, developers need to think about access permissions, data protection, and how to avoid unsafe configurations.
 
-### 3. AWS Security Agent — Securing Web Applications
+I also understood that AI tools may help with security reviews, but their findings still need to be checked. Using an automated tool does not guarantee that an application is completely secure.
 
-**Thinh** presented **Securing Your Web Apps With AWS Security Agent**.
+This is an area I would like to learn more about before deploying my own projects to AWS.
 
-The session introduced an AI Agent-assisted approach to reviewing web application security.
+4. Amazon Bedrock AgentCore — Runtime and Memory
 
-One topic that caught my attention was **Design Security Review**.
+The presentation about Amazon Bedrock AgentCore introduced more concepts related to developing and operating AI Agents.
 
-According to the presentation, the tool can use several types of input, including:
+The two topics I paid attention to were Runtime and Memory.
 
-- System design documents written in Markdown.
-- Terraform infrastructure configuration files.
-- Configured security requirement packs.
+AgentCore Runtime
 
-These inputs can support the process of evaluating a system design against defined security requirements.
+From what I understood, Runtime is related to the environment where an AI Agent runs and how its execution is managed.
 
-This helped me understand that security reviews do not necessarily need to wait until an application is fully developed. Potential security risks can also be considered during the design stage.
+This helped me realize that an AI Agent needs more than a model for processing information. It also needs a suitable environment to perform tasks.
 
-The speaker also discussed costs in a section titled **The Pricing Reality**.
+AgentCore Memory
 
-From this topic, I learned that organizations should consider the assessment scope and the amount of time an AI Agent spends performing tasks when estimating usage costs.
+I found Memory interesting because it relates to storing information and maintaining context during interactions.
 
-### 4. Amazon Bedrock AgentCore — Runtime and Memory
+For example, when an application handles several related requests, keeping track of previous interactions may help it process information more effectively.
 
-**Xuan An** presented **Amazon Bedrock AgentCore**, focusing on **Runtime** and **Memory Architecture**.
+I also became familiar with concepts such as Session IDs, Actor IDs, and interaction data.
 
-The session began with an introduction to AI Agents, Agentic AI, and Agentic Systems before exploring several AgentCore components.
+Although I did not fully understand how to implement these features, the presentation gave me a basic idea of what developers should consider when building AI applications with multiple processing steps.
 
-#### AgentCore Runtime
+5. What I Learned
 
-The Runtime section gave me an overview of an execution environment designed for AI Agent applications.
+After the Mini Meeting, I noted several useful points:
 
-It helped me understand that an AI Agent system needs mechanisms for executing and managing tasks rather than simply sending a request to an AI model and returning a response.
+Understood the basic processing steps of a Voice AI system.
 
-#### AgentCore Memory
+Learned about different approaches to developing voice-based AI applications.
 
-The Memory section introduced how interaction information can be organized into events and related data fields.
+Understood the purpose of AWS RAM for sharing resources between AWS accounts.
 
-Some concepts discussed included:
+Realized that application security should be considered from the design stage.
 
-- **Memory ID:** Identifies a memory resource.
-- **Actor ID:** Identifies an actor involved in an interaction.
-- **Session ID:** Identifies an interaction session.
-- **Payload:** Contains the recorded interaction data.
-- **Timestamp:** Records when an event occurred.
-- **Branch:** Represents information associated with an interaction branch.
+Learned about Runtime and Memory in AI Agent systems.
 
-The presentation helped me visualize how information from interaction sessions can be structured and managed to support AI Agent applications.
+Gained a better understanding of how AI works with other application components.
 
-The meeting also briefly mentioned **Kiro Crew** and **App & Extensibility**. These are topics I would like to explore further.
+Some topics were still difficult for me, especially AWS RAM and AgentCore. I would need to read more documentation to understand them better.
 
-### 5. Key Takeaways
+6. Connection to My Project
 
-After attending the FCAJ Mini Meeting, I summarized several important lessons:
+At that time, I was working on LoveSpot, a restaurant recommendation and itinerary planning application for Ho Chi Minh City.
 
-- Understood the basic differences between Cascade, Speech-to-Speech, and Full Duplex Speech-to-Speech.
-- Learned how Voice AI systems combine audio processing, AI models, APIs, and business workflows.
-- Gained an introduction to AWS RAM and resource sharing across multiple AWS accounts.
-- Recognized the value of reviewing application security during the system design stage.
-- Became more aware of potential costs when using AI-assisted security assessment tools.
-- Learned about Amazon Bedrock AgentCore Runtime and Memory.
-- Gained an initial understanding of how interaction data and context can be organized within AI Agent systems.
+The team was still exploring and developing the early parts of the application, including the interface, venue data, and basic features.
 
-### 6. Connection to My Personal Project
+The Mini Meeting made me think more about how different components of an AI application communicate with one another.
 
-I am currently developing a **restaurant recommendation and itinerary planning application for Ho Chi Minh City**.
+For LoveSpot, managing venue information and correctly processing user requirements were important areas to consider. The security topics also reminded me to pay more attention to how data and APIs should be handled.
 
-At the time of the meeting, the project was in its early development stage, with initial components such as the user interface and Backend structure taking shape.
+Technologies such as Voice AI, AWS RAM, and AgentCore were only topics I learned about during the event. They were not services that had been implemented in LoveSpot.
 
-The presentations provided useful concepts that I could consider during future development.
+7. Personal Reflection
 
-In particular, I realized the importance of separating system responsibilities, managing data carefully, and controlling how user requests are processed.
+I found the Mini Meeting interesting because it introduced several topics beyond the basic AWS lessons I had studied.
 
-The security-related topics also encouraged me to pay more attention to system design and potential risks before deployment.
+Among the presentations, I was most interested in Vietnamese Voice AI. The idea of a system that could understand and respond through speech made me curious about how audio data is processed behind the scenes.
 
-However, these technologies were primarily topics I explored during the meeting. **They do not represent features or AWS services that I have already implemented in my project.**
+However, some technical parts were difficult to follow, especially when the presentations discussed more advanced architectures and components. I still needed more time to understand those concepts.
 
-### 7. Personal Reflection
-
-What interested me most about the FCAJ Mini Meeting was how the speakers explained the practical challenges behind real-world AI applications.
-
-Previously, when learning about AI, I mainly focused on the models themselves. However, the Voice AI and AI Agent presentations helped me understand that many other components are necessary for a complete system.
-
-Some topics, such as AWS RAM and AgentCore Memory, were still new to me. I would need to study additional documentation to better understand their practical applications.
-
-Overall, the meeting broadened my knowledge of AI and AWS and gave me additional direction for future learning and project development.
+After the event, I had several new topics to explore. I also realized that building a good application requires knowledge of data, security, and system operations, not just programming.
 
 ### 8. Event Photos
 
-Below are five photos from the FCAJ Mini Meeting.
+Below are some photos from the FCAJ Mini Meeting.
 
 #### Photo 1
 
-![Photo 1 from FCAJ Mini Meeting](picture_event_3/1.jpg)
+![Photo 1 at FCAJ Mini Meeting](picture_event_3/1.jpg)
 
 #### Photo 2
 
-![Photo 2 from FCAJ Mini Meeting](picture_event_3/2.jpg)
+![Photo 2 at FCAJ Mini Meeting](picture_event_3/2.jpg)
 
 #### Photo 3
 
-![Photo 3 from FCAJ Mini Meeting](picture_event_3/3.jpg)
+![Photo 3 at FCAJ Mini Meeting](picture_event_3/3.jpg)
 
 #### Photo 4
 
-![Photo 4 from FCAJ Mini Meeting](picture_event_3/4.jpg)
+![Photo 4 at FCAJ Mini Meeting](picture_event_3/4.jpg)
 
 #### Photo 5
 
-![Photo 5 from FCAJ Mini Meeting](picture_event_3/5.jpg)
+![Photo 5 at FCAJ Mini Meeting](picture_event_3/5.jpg)
 
-### Conclusion
 
-The **FCAJ Mini Meeting on October 24, 2026**, introduced me to several topics related to Voice AI, AWS resource management, application security, and AI Agent architecture.
+Conclusion
 
-I was particularly interested in how practical AI systems combine different components, including data processing, AI models, APIs, Memory, and business workflows.
+The FCAJ Mini Meeting on October 24, 2026, helped me learn more about Voice AI, AWS resource management, application security, and AI Agents.
 
-The presentations helped me recognize that developing AI applications involves more than selecting an AI model. It also requires careful system design, data management, and operational considerations.s
+The main lesson I took away was that real AI applications need several components working together. Besides the AI model, developers also need to consider data processing, system connections, and result validation.
+
+Overall, it was a useful learning experience that gave me more topics to explore while continuing my AWS studies and working on the LoveSpot project.
