@@ -27,6 +27,16 @@ Tôi là **Lê Nhật Trường**, sinh viên ngành **AI** tại **FPT Universi
 
 &emsp; **Thời gian học:** 14/09/2026 – 05/12/2026
 
+<div style="text-align: center; margin: 2rem auto;">
+  <img src="/images/avatar.png" alt="Lê Nhật Trường" style="max-width: 580px; width: 100%; height: auto; margin: 0 auto; display: block; border-radius: 6px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);" />
+</div>
+
 ### Nội dung website
 
 1. [Worklog](1-Worklog/)
+2. [Proposal](2-Proposal/)
+3. [Blogs Posted](3-BlogsPosted/)
+4. [Events Participated](4-EventParticipated/)
+5. [Workshop](5-Workshop/)
+6. [Self-evaluation](6-Self-evaluation/)
+7. [Sharing and Feedback](7-Feedback/)

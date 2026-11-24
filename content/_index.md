@@ -27,6 +27,16 @@ I am **Lê Nhật Trường**, an **AI** student at **FPT University**. I am cur
 
 &emsp; **Learning Period:** September 14, 2026 – December 5, 2026
 
-### Website Content
+<div style="text-align: center; margin: 2rem auto;">
+  <img src="/images/avatar.png" alt="Lê Nhật Trường" style="max-width: 580px; width: 100%; height: auto; margin: 0 auto; display: block; border-radius: 6px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);" />
+</div>
+
+### Report Content
 
 1. [Worklog](1-Worklog/)
+2. [Proposal](2-Proposal/)
+3. [Blogs Posted](3-BlogsPosted/)
+4. [Events Participated](4-EventParticipated/)
+5. [Workshop](5-Workshop/)
+6. [Self-evaluation](6-Self-evaluation/)
+7. [Sharing and Feedback](7-Feedback/)

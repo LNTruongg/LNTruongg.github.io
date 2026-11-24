@@ -1,44 +1,64 @@
 ---
 title: "Events Participated"
-date: 2024-01-01
+date: 2026-11-18
 weight: 4
 chapter: false
 pre: " <b> 4. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** for your report, including this warning.
-{{% /notice %}}
+### Introduction
 
-> In this section, you should list and describe in detail the events you have participated in during your internship or work experience.  
-> 
-> Each event should be presented in the format Event 1, Event 2, Event 3…, along with the following details:
-> * Event name
-> * Date and time
-> * Location (if applicable)
-> * Your role in the event (attendee, event support, speaker, etc.)
-> * A brief description of the event’s content and main activities
-> * Outcomes or value gained (lessons learned, new skills, contribution to the team/project)
-> * This listing helps demonstrate your actual participation as well as the soft skills and experience you have gained from each event.
+During my participation in the **First Cloud AI Journey (FCAJ)** program, I had the opportunity to attend and follow several events focusing on cloud computing, artificial intelligence, and software development.
 
-During my internship, I participated in two events. Each one was a memorable experience that provided new, interesting, and useful knowledge, along with gifts and wonderful moments.
+These events helped me learn more about AWS technologies, real-world AI applications, and practical experiences shared by industry speakers.
 
-### [Event 1](4.1-Event1/)  
-&emsp;**Event Name:** GenAI-powered App-DB Modernization workshop  
+Below are the three events I participated in during the program.
 
-&emsp;**Date & Time:** 09:00, August 13, 2025  
+### [Event 1 - FCAJ Buildrathon Kickoff](4.1-Event1/)
 
-&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
+- **Event Name:** FCAJ Buildrathon Kickoff.
+- **Date:** September 26, 2026.
+- **Participation Format:** Following the event presentations.
+- **Event Location:** AWS office in Ho Chi Minh City.
+- **Role:** Attendee.
 
-&emsp;**Role:** Attendee  
+**Main Highlights:**
 
----
+The kickoff introduced the First Cloud AI Journey program and its Buildrathon activities. The event also featured an introduction from CMC Global and a presentation about the Triage Bot project and Market Slack Bot architecture.
 
-### [Event 2](4.2-Event2/)  
-&emsp;**Event Name:** GenAI-powered App-DB Modernization workshop  
+Through these presentations, I learned how an AI application can be developed to address real-world problems and gained insights into the roles of components such as `SOUL.md`, Memory, APIs, and Databases in chatbot systems.
 
-&emsp;**Date & Time:** 09:00, August 13, 2025  
+### [Event 2 - AWS Cloud and AI Day Hanoi](4.2-Event2/)
 
-&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
+- **Event Name:** AWS Cloud and AI Day Hanoi.
+- **Date:** September 29, 2026.
+- **Main Event Location:** Hanoi, Vietnam.
+- **My Attendance Location:** Ho Chi Minh City, Vietnam.
+- **Participation Format:** Viewing party.
+- **Role:** Attendee.
 
-&emsp;**Role:** Attendee  
+**Main Highlights:**
+
+The event focused on topics such as Cloud architecture, system scalability, AI Agents, AI-assisted software development, and security on AWS.
+
+By following the sessions at the viewing party, I gained a broader understanding of how businesses adopt Cloud and AI technologies, as well as the importance of testing, security, and system operations.
+
+### [Event 3 - FCAJ Mini Meeting](4.3-Event3/)
+
+- **Event Name:** FCAJ Mini Meeting.
+- **Date:** October 24, 2026.
+- **Role:** Attendee.
+
+**Main Highlights:**
+
+The Mini Meeting featured technical presentations on **Vietnamese Voice AI**, **AWS Resource Access Manager (RAM)**, **AWS Security Agent**, and **Amazon Bedrock AgentCore**.
+
+I learned about different approaches to building Voice Agents, sharing resources across multiple AWS accounts, reviewing security during the system design stage, and managing Runtime and Memory in AI Agent applications.
+
+### Conclusion
+
+Through these three events, I had the opportunity to expand my knowledge of AWS, Cloud Computing, and artificial intelligence applications.
+
+In addition to the concepts covered throughout the First Cloud AI Journey program, the practical presentations helped me better understand system design, technology selection, and problem-solving approaches in software development.
+
+These lessons also provide useful references as I continue learning and developing my restaurant recommendation and itinerary planning application for Ho Chi Minh City.

@@ -1,12 +1,10 @@
 ---
 title: "AWS API Gateway: How Can Incorrect Authorizer Caching Allow Regular Users to Access Admin APIs?"
-date: 2026-11-9
+date: 2026-11-09
 weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-
-# AWS API Gateway: How Can Incorrect Authorizer Caching Allow Regular Users to Access Admin APIs?
 
 When an **Amazon API Gateway HTTP API** uses a **Lambda Authorizer** with Simple Responses and Authorizer Caching, a cache key based only on the Authorization token may allow an authorization result from one route to be reused for another.
 

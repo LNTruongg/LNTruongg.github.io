@@ -1,12 +1,11 @@
 ---
 title: "AWS S3: Đã cấu hình Lifecycle để xóa dữ liệu, vì sao vẫn có thể bị tính phí lưu trữ?"
-date: 2026-11-4
+date: 2026-11-04
 weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# AWS S3: Đã cấu hình Lifecycle để xóa dữ liệu, vì sao vẫn có thể bị tính phí lưu trữ?
 
 Giả sử một **Amazon S3 bucket** đã bật **Versioning**, đang lưu 100 objects (mỗi object chỉ có một version) và có Lifecycle Rule tự động expire current versions sau 7 ngày.
 

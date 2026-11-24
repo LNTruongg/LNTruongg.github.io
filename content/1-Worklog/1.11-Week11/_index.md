@@ -1,5 +1,6 @@
+
 ---
-title: "Week 11 Worklog"
+title: "Worklog Week 11"
 date: 2026-11-23
 weight: 11
 chapter: false
@@ -8,38 +9,47 @@ pre: " <b> 1.11. </b> "
 
 ### Week 11 Objectives:
 
-- Learn about AWS Elastic Beanstalk and how it helps deploy web applications.
-- Become familiar with Docker, Containers, and Docker Images.
-- Understand that Amazon ECR stores images, while Amazon ECS runs and manages containers.
-- Learn the basic components of ECS and check costs before hands-on practice.
+- Learn about AWS Elastic Beanstalk and how it supports web application deployment.
+- Become familiar with Docker, Docker Images, Containers, and the roles of Amazon ECR and Amazon ECS.
+- Understand the basic components of Amazon ECS and consider potential costs before deploying applications on AWS.
+- **Project Work:** Continue developing the restaurant recommendation and itinerary planning application for Ho Chi Minh City.
+- **Project Work:** Review the integration between restaurant data, the recommendation system, Backend, and Frontend.
+- **Project Work:** Evaluate recommendation results, itinerary generation, and the handling of incomplete or unsuitable data.
 
-### Tasks to Be Completed This Week:
+### Tasks to Complete This Week:
 
-| Day | Task | Start Date | Completion Date | Reference |
+| Day | Task | Start Date | Completion Date | References |
 | --- | --- | --- | --- | --- |
-| 2 | Learn about Elastic Beanstalk and how it helps deploy web applications to AWS without manually setting up every infrastructure component. | 23/11/2026 | 23/11/2026 | [AWS Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html) |
-| 3 | Learn about Applications, Environments, and Platforms in Elastic Beanstalk. Review an example of updating an application and why running environments can still incur charges. | 24/11/2026 | 24/11/2026 | [Elastic Beanstalk Concepts](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.html), [Elastic Beanstalk Pricing](https://aws.amazon.com/elasticbeanstalk/pricing/) |
-| 4 | Learn about Docker and Containers. Understand the difference between Docker Images and Containers, and read a simple Dockerfile example used to package an application. | 25/11/2026 | 25/11/2026 | [Containers on Amazon ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-configuration.html) |
-| 5 | Learn about Amazon ECR, Repositories, and Image Tags. Review how images are stored in ECR for other services to use, without creating a real Repository. | 26/11/2026 | 26/11/2026 | [Amazon ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html) |
-| 6 | Learn about Amazon ECS and the concepts of Clusters, Task Definitions, Tasks, and Services. Read about running containers on EC2 and Fargate without launching a Task. | 27/11/2026 | 27/11/2026 | [Amazon ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html), [ECS Task Definitions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definitions.html) |
-| 7 | Review the differences between Elastic Beanstalk, ECR, and ECS. Go over the process from a Docker Image to ECR and then ECS, and read pricing information to avoid unexpected charges. | 28/11/2026 | 28/11/2026 | [Amazon ECS Pricing](https://aws.amazon.com/ecs/pricing/), [Amazon ECR Pricing](https://aws.amazon.com/ecr/pricing/) |
+| Monday | Learn about AWS Elastic Beanstalk, including Application, Environment, and Platform. Explore how web applications are deployed and which underlying AWS resources may incur costs. | 23/11/2026 | 23/11/2026 | [AWS Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html), [Elastic Beanstalk Concepts](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.html) |
+| Tuesday | Learn about Docker Images and Containers. Explore Amazon ECR for storing container images and Amazon ECS for running and managing containers. Study Cluster, Task Definition, Service, and Fargate without creating actual AWS resources. | 24/11/2026 | 24/11/2026 | [Amazon ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html), [Amazon ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html) |
+| Wednesday | **Project Work:** Review the architecture of the restaurant recommendation and itinerary planning application for Ho Chi Minh City. Examine the roles of the Frontend, Backend, recommendation system, and restaurant dataset. Identify the components that need to be integrated to generate complete itineraries. | 25/11/2026 | 25/11/2026 | Project source code and architecture documentation |
+| Thursday | **Project Work:** Examine the data flow from user requests to the recommendation system. Review inputs such as budget, preferences, location, and GPS coordinates. Check how restaurant data is retrieved and provided for the recommendation process. | 26/11/2026 | 26/11/2026 | Project dataset, Backend APIs, and data processing documentation |
+| Friday | **Project Work:** Continue developing and reviewing API integration between system components. Examine input and output data formats, restaurant recommendation results, and how generated itineraries are presented in the user interface. | 27/11/2026 | 27/11/2026 | Frontend, Backend, and recommendation system source code |
+| Saturday | **Project Work:** Test restaurant recommendations and itinerary generation using different scenarios. Evaluate restaurant relevance, geographical distances, and the order of destinations. Record issues and limitations for improvement in the following week. | 28/11/2026 | 28/11/2026 | Project source code, dataset, and test scenarios |
 
-### Expected Week 11 Achievements:
+### Expected Outcomes for Week 11:
 
-**Knowledge to Gain:**
+**AWS Knowledge Acquired:**
 
-- Understand that Elastic Beanstalk makes application deployment and management easier, but resources such as EC2 instances or Load Balancers can still incur charges.
-- Learn that a Docker Image packages an application and what it needs to run, while a Container is a running instance created from an Image.
-- Understand that ECR stores Container Images, while ECS helps run and manage Containers on AWS.
-- Become familiar with ECS Clusters, Task Definitions, Tasks, and Services, and learn that ECS can use EC2 or Fargate to run applications.
+- Understand how AWS Elastic Beanstalk simplifies web application deployment and management, while recognizing that underlying infrastructure resources may still incur costs.
+- Distinguish between a Docker Image, which packages an application and its dependencies, and a Container, which is a running instance created from an Image.
+- Understand that Amazon ECR stores container images, while Amazon ECS runs and manages containers on AWS.
+- Become familiar with Cluster, Task Definition, Task, Service, and the two container deployment options: Amazon EC2 and AWS Fargate.
+- Gain foundational knowledge for evaluating possible AWS deployment approaches for the application in the future.
 
-**Review and Learning with the Materials:**
+**Expected Project Outcomes:**
 
-- Review an example of deploying a web application using Elastic Beanstalk and the AWS resources created behind it.
-- Read a Dockerfile example and learn how an Image can be stored in ECR and then used by ECS.
-- Focus on documentation without creating Elastic Beanstalk Environments, ECR Repositories, or running ECS Tasks to avoid unexpected costs.
+- **Project Work:** Develop a clearer understanding of how the Frontend, Backend, recommendation system, and restaurant dataset work together.
+- **Project Work:** Identify the processing flow from user inputs to restaurant recommendations and itinerary generation.
+- **Project Work:** Review restaurant data and the use of GPS coordinates in recommendations and map visualization.
+- **Project Work:** Examine data exchange through APIs between system components and identify areas that require improvement.
+- **Project Work:** Prepare test scenarios to evaluate recommendation quality and itinerary feasibility before finalizing the application.
 
-**Topics to Watch Out For and How to Study Them:**
+**Challenges and Proposed Solutions:**
 
-- Images and Containers are closely related. A simple way to remember the difference is that an Image packages an application, while a Container is a running instance of that Image.
-- ECR and ECS also have similar names but different roles. Reviewing the process helps: ECR stores Images, and ECS uses those Images to run and manage Containers.
+- **AWS Knowledge:** Elastic Beanstalk, ECR, and ECS serve different purposes. Distinguish between application deployment, container image storage, and container orchestration, while considering potential costs before using these services.
+- **Project Work — System Integration:** The Frontend, Backend, and recommendation system must use consistent input and output data structures to avoid integration errors.
+- **Project Work — Restaurant Data:** Restaurants with missing or inaccurate GPS coordinates may affect map visualization and itinerary generation. Validate location data before using it.
+- **Project Work — Recommendation Quality:** Recommendations should satisfy user requirements while considering budget, geographical distance, and the suitability of selected restaurants.
+- **Project Work — Testing:** Test multiple input scenarios, record issues, and make gradual improvements instead of evaluating the system using only one sample itinerary.
+- **Project Work — Deployment Scope:** Prioritize local development and integration testing. Consider AWS deployment separately based on actual requirements and estimated costs.

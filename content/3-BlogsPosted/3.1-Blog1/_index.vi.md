@@ -6,7 +6,6 @@ chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# AWS Lambda + SQS: Chỉ một message lỗi, vì sao cả batch phải xử lý lại?
 
 Giả sử AWS Lambda nhận một batch gồm **10 messages** từ Amazon SQS Standard để xử lý đơn hàng:
 

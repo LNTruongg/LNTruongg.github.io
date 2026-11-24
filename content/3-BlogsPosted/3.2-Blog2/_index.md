@@ -1,12 +1,12 @@
 ---
 title: "AWS S3: Why Can Storage Charges Continue After Configuring Lifecycle Expiration?"
-date: 2026-11-4
+date: 2026-11-04
 weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# AWS S3: Why Can Storage Charges Continue After Configuring Lifecycle Expiration?
+
 
 Suppose an **Amazon S3 bucket** has **Versioning enabled**, contains 100 objects (each with only one version), and uses a Lifecycle Rule to expire current versions after 7 days.
 

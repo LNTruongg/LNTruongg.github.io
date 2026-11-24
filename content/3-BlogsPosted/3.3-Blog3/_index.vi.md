@@ -1,12 +1,11 @@
 ---
 title: "AWS API Gateway: Vì sao cấu hình sai Authorizer Cache có thể khiến user thường truy cập API của Admin?"
-date: 2026-11-9
+date: 2026-11-09
 weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
 
-# AWS API Gateway: Vì sao cấu hình sai Authorizer Cache có thể khiến user thường truy cập API của Admin?
 
 Khi **Amazon API Gateway HTTP API** sử dụng **Lambda Authorizer** với Simple Responses và Authorizer Caching, nếu cache key chỉ dựa trên Authorization token mà không phân biệt route, kết quả Allow của một API có thể được tái sử dụng cho API khác, dẫn đến truy cập ngoài quyền hạn.
 

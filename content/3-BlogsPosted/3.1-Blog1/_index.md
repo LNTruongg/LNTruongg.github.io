@@ -7,7 +7,6 @@ chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# AWS Lambda + SQS: Why Can One Failed Message Cause a Whole Batch Retry?
 
 Suppose AWS Lambda receives a batch of **10 messages** from an Amazon SQS Standard queue to process orders:
 

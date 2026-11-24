@@ -1,125 +1,152 @@
 ---
-title: "Event 2"
-date: 2024-01-01
-weight: 1
+title: "Event 2 - AWS Cloud and AI Day Hanoi"
+date: 2026-09-29
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### Giới thiệu sự kiện
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+Ngày **29/09/2026**, tôi tham gia buổi **viewing party tại TP. Hồ Chí Minh** để theo dõi sự kiện **AWS Cloud and AI Day Hanoi** được tổ chức tại Hà Nội.
 
-### Mục Đích Của Sự Kiện
+Sự kiện tập trung vào những chủ đề liên quan đến điện toán đám mây, trí tuệ nhân tạo, phát triển phần mềm và các giải pháp công nghệ được ứng dụng trong doanh nghiệp.
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+Thông qua các phiên trình bày, tôi có cơ hội tìm hiểu thêm về kiến trúc hệ thống Cloud, AI Agent, ứng dụng AI trong phát triển phần mềm, bảo mật và vận hành hệ thống.
 
-### Danh Sách Diễn Giả
+### Thông tin sự kiện
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+- **Tên sự kiện:** AWS Cloud and AI Day Hanoi.
+- **Thời gian:** 29/09/2026.
+- **Địa điểm tổ chức chính:** Hà Nội, Việt Nam.
+- **Địa điểm tham gia:** TP. Hồ Chí Minh.
+- **Hình thức:** Tham gia viewing party, theo dõi các phiên trình bày của sự kiện.
 
-### Nội Dung Nổi Bật
+### Nội dung tìm hiểu
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+#### 1. Kiến trúc Cloud và khả năng mở rộng hệ thống
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+Một trong những nội dung được đề cập tại sự kiện là cách xây dựng hệ thống có khả năng phục vụ số lượng lớn người dùng, đồng thời duy trì hiệu năng và tính sẵn sàng.
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+Các bài trình bày giới thiệu những thách thức trong hệ thống phân tán, đặc biệt khi lượng dữ liệu và số lượng yêu cầu ngày càng tăng.
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+Tôi cũng được tìm hiểu về **Amazon Dynamo**, một hệ thống lưu trữ key-value được thiết kế để đáp ứng yêu cầu về khả năng mở rộng và tính sẵn sàng trong các hệ thống phân tán.
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+Qua phần này, tôi hiểu thêm rằng khi xây dựng ứng dụng Cloud, lập trình viên không chỉ quan tâm đến chức năng mà còn phải xem xét khả năng mở rộng, độ tin cậy và hiệu quả vận hành.
 
-#### Domain-Driven Design (DDD)
+#### 2. AI Agent và xu hướng phát triển ứng dụng AI
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+Một chủ đề khác mà tôi quan tâm là sự phát triển của **AI Agent** và các ứng dụng **AI-native**.
 
-#### Event-Driven Architecture
+Các phần trình bày đề cập đến cách AI Agent có thể hỗ trợ tự động hóa quy trình, xử lý công việc và nâng cao hiệu quả hoạt động trong doanh nghiệp.
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+Tuy nhiên, việc triển khai AI trong thực tế cũng đặt ra nhiều vấn đề cần cân nhắc:
 
-#### Compute Evolution
+- Kiểm soát chất lượng kết quả đầu ra.
+- Đảm bảo AI hoạt động đúng phạm vi và mục đích.
+- Kiểm tra và đánh giá những kết quả do AI tạo ra.
+- Có sự giám sát của con người đối với những tác vụ quan trọng.
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+Điều tôi rút ra là việc xây dựng một ứng dụng AI không chỉ đơn giản là kết nối với mô hình ngôn ngữ. Hệ thống còn cần quy trình xử lý rõ ràng, cơ chế kiểm thử và cách quản lý phù hợp.
 
-#### Amazon Q Developer
+#### 3. Phát triển phần mềm với sự hỗ trợ của AI
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+Sự kiện cũng giới thiệu những hướng tiếp cận mới trong phát triển phần mềm, đặc biệt là việc sử dụng **AI Coding Assistants** và AI Agent để hỗ trợ lập trình viên.
 
-### Những Gì Học Được
+AI có thể giúp người phát triển tìm hiểu mã nguồn, gợi ý cách giải quyết vấn đề và hỗ trợ một số tác vụ trong quá trình xây dựng ứng dụng.
 
-#### Tư Duy Thiết Kế
+Tuy nhiên, việc sử dụng AI vẫn cần kết hợp với các bước phát triển phần mềm cơ bản như:
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+- Phân tích và xác định yêu cầu.
+- Thiết kế kiến trúc hệ thống.
+- Kiểm thử chức năng.
+- Đánh giá các vấn đề bảo mật.
+- Theo dõi và cải thiện ứng dụng sau khi triển khai.
 
-#### Kiến Trúc Kỹ Thuật
+Qua nội dung này, tôi nhận thấy các công cụ AI có thể giúp tăng năng suất làm việc, nhưng kiến thức lập trình và tư duy giải quyết vấn đề vẫn rất quan trọng.
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+#### 4. Bảo mật và vận hành hệ thống Cloud
 
-#### Chiến Lược Hiện Đại Hóa
+Bảo mật là một trong những vấn đề cần quan tâm khi phát triển và triển khai ứng dụng trên Cloud.
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+Các nội dung được chia sẻ đề cập đến việc phát hiện lỗ hổng, sử dụng công cụ hỗ trợ kiểm tra bảo mật và xây dựng quy trình vận hành hệ thống an toàn.
 
-### Ứng Dụng Vào Công Việc
+Tôi hiểu thêm rằng bảo mật không nên chỉ được xem xét khi ứng dụng đã hoàn thành, mà cần được chú ý trong suốt quá trình phát triển.
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+Bên cạnh đó, việc giám sát hoạt động hệ thống cũng giúp phát hiện vấn đề và hỗ trợ quá trình xử lý sự cố.
 
-### Trải nghiệm trong event
+#### 5. AWS và ứng dụng AI trong doanh nghiệp
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
+Một nội dung đáng chú ý khác là cách các doanh nghiệp có thể kết hợp dịch vụ AWS với trí tuệ nhân tạo để phát triển các giải pháp công nghệ.
 
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
+Các phiên trình bày đề cập đến vai trò của Cloud trong việc cung cấp hạ tầng, hỗ trợ xử lý dữ liệu, triển khai ứng dụng AI và giám sát hoạt động của hệ thống.
 
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
+Qua đó, tôi có thêm góc nhìn về cách công nghệ Cloud và AI có thể được sử dụng cùng nhau để giải quyết những bài toán thực tế.
 
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
+### Những kiến thức rút ra
 
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
+Sau khi theo dõi sự kiện, tôi tổng hợp được một số nội dung đáng chú ý:
 
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
+- Hiểu thêm về khả năng mở rộng và tính sẵn sàng của các hệ thống Cloud.
+- Biết thêm về hệ thống phân tán và những thách thức khi phục vụ số lượng lớn người dùng.
+- Tìm hiểu xu hướng phát triển của AI Agent và AI-native applications.
+- Nhận thấy vai trò của AI trong việc hỗ trợ lập trình và tự động hóa công việc.
+- Hiểu rằng kết quả do AI tạo ra vẫn cần được kiểm tra và đánh giá.
+- Có thêm kiến thức về bảo mật, giám sát và quản lý vận hành ứng dụng Cloud.
+- Nhận biết được vai trò của AWS trong việc hỗ trợ doanh nghiệp xây dựng và triển khai các giải pháp AI.
 
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+### Liên hệ với dự án cá nhân
+
+Hiện tại, tôi đang phát triển dự án **ứng dụng gợi ý quán ăn và tạo lịch trình tại TP.HCM**.
+
+Từ những nội dung được chia sẻ tại sự kiện, tôi nhận thấy một số kiến thức có thể tham khảo cho quá trình phát triển dự án.
+
+Trước hết, việc xây dựng hệ thống gợi ý cần quan tâm đến chất lượng dữ liệu và khả năng xử lý yêu cầu của người dùng. Khi số lượng địa điểm và người dùng tăng lên, khả năng mở rộng của hệ thống cũng là một vấn đề cần xem xét.
+
+Bên cạnh đó, những kiến thức về AI giúp tôi hiểu rõ hơn tầm quan trọng của việc kiểm tra kết quả gợi ý, thay vì chỉ dựa vào kết quả do hệ thống tạo ra.
+
+Các nội dung về bảo mật và vận hành Cloud cũng là cơ sở để tôi tiếp tục tìm hiểu khi có kế hoạch triển khai ứng dụng lên AWS trong tương lai.
+
+Đây là những kiến thức tham khảo và định hướng phát triển, không có nghĩa tất cả các giải pháp được giới thiệu tại sự kiện đã được triển khai trong dự án hiện tại.
+
+### Cảm nhận cá nhân
+
+Việc tham gia viewing party giúp tôi có thêm cơ hội tiếp cận những kiến thức về Cloud Computing và AI thông qua các tình huống ứng dụng thực tế.
+
+Trong số các nội dung được trình bày, tôi quan tâm nhiều đến AI Agent và cách AI có thể hỗ trợ quá trình phát triển phần mềm.
+
+Một số khái niệm về hệ thống phân tán và kiến trúc Cloud vẫn còn khá mới đối với tôi, vì vậy tôi cần tiếp tục tìm hiểu thêm qua tài liệu và quá trình thực hành.
+
+Nhìn chung, sự kiện giúp tôi mở rộng góc nhìn về lĩnh vực AI và Cloud, đồng thời nhận ra tầm quan trọng của việc kết hợp kiến thức lập trình, thiết kế hệ thống và vận hành ứng dụng.
+
+### Một số hình ảnh khi tham gia sự kiện
+
+Dưới đây là một số hình ảnh tư liệu từ buổi viewing party tại TP. Hồ Chí Minh.
+
+#### Hình ảnh 1 — AWS Cloud and AI Day Hanoi
+
+![Hình ảnh sự kiện AWS Cloud and AI Day Hanoi](picture_event_2/1.jpg)
+
+#### Hình ảnh 2 — Hoạt động tại sự kiện
+
+![Hình ảnh hoạt động tại viewing party](picture_event_2/2.jpg)
+
+#### Hình ảnh 3 — Nội dung trình bày
+
+![Hình ảnh nội dung trình bày tại sự kiện](picture_event_2/3.jpg)
+
+#### Hình ảnh 4 — Theo dõi sự kiện
+
+![Hình ảnh tư liệu buổi viewing party](picture_event_2/4.jpg)
+
+#### Hình ảnh 5 — Hình ảnh sự kiện
+
+![Hình ảnh khác từ sự kiện](picture_event_2/5.jpg)
+
+### Tổng kết
+
+Buổi viewing party của **AWS Cloud and AI Day Hanoi ngày 29/09/2026** giúp tôi hiểu thêm về các xu hướng phát triển trong lĩnh vực điện toán đám mây và trí tuệ nhân tạo.
+
+Qua những nội dung được trình bày, tôi nhận thấy việc xây dựng ứng dụng hiện đại không chỉ liên quan đến lập trình mà còn đòi hỏi kiến thức về kiến trúc hệ thống, khả năng mở rộng, bảo mật và vận hành.
+
+Những kiến thức này sẽ là nền tảng hữu ích để tôi tiếp tục học tập và phát triển dự án AI trong thời gian tới.
