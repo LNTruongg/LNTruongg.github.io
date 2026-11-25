@@ -9,15 +9,15 @@ chapter: false
 
 ### About Me
 
-I am **Lê Nhật Trường**, an **AI** student at **FPT University**. I am currently following an AWS learning path through the **First Cloud Journey** program, which runs from **September 14 to December 5, 2026**. This website records my learning process, the AWS topics I explore, and related content throughout the program.
+I am **Le Nhat Truong**, an **AI** student at **FPT University**. I am currently following an AWS learning path through the **First Cloud Journey** program, which runs from **September 14 to December 5, 2026**. This website records my learning process, the AWS topics I explore, and related content throughout the program.
 
 ### Personal Information
 
-&emsp; **Full Name:** Lê Nhật Trường
+&emsp; **Full Name:** Le Nhat Truong
 
 &emsp; **University:** FPT University
 
-&emsp; **Major:** AI
+&emsp; **Major:**(Artificial Intelligence) AI 
 
 &emsp; **Email:** [lenhattruongbt71@gmail.com](mailto:lenhattruongbt71@gmail.com)
 

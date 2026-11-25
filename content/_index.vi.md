@@ -17,7 +17,7 @@ Tôi là **Lê Nhật Trường**, sinh viên ngành **AI** tại **FPT Universi
 
 &emsp; **Trường:** FPT University
 
-&emsp; **Ngành:** AI
+&emsp; **Ngành:** AI  
 
 &emsp; **Email:** [lenhattruongbt71@gmail.com](mailto:lenhattruongbt71@gmail.com)
 

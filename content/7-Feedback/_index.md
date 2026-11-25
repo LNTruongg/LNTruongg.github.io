@@ -1,47 +1,71 @@
 ---
 title: "Sharing and Feedback"
-date: 2024-01-01
+date: 2026-11-25
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+### Introduction
 
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud AI Journey program. This will help the FCAJ team improve any shortcomings based on the following aspects:
+During the **First Cloud AI Journey (FCAJ)** program, I had opportunities to learn more about Cloud Computing, AWS services, and how technical knowledge can be applied to software development.
 
-### Overall Evaluation
+Besides studying through documentation, I attended technology events and worked with my team on **LoveSpot**. These activities gave me more experience in learning new technologies and solving practical problems.
 
-**1. Working Environment**  
-The working environment is very friendly and open. FCAJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+Below are my thoughts and feedback about the program.
 
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+### 1. Overall Evaluation
 
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+I think FCAJ is a very useful program for students who want to learn about AWS and explore career opportunities in Cloud Computing.
 
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+The program introduces different topics, from basic services to databases, security, and application deployment.
 
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
+What I find valuable is that learning is not limited to theory. Participants also have opportunities to explore how their knowledge can be applied to projects.
 
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+However, there are many topics to study within a relatively short period. Sometimes, I found it difficult to manage my time and understand each topic in depth.
 
----
+### 2. Level of Satisfaction
 
-### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+Overall, I am **very satisfied with my experience in FCAJ**.
 
----
+One thing I appreciate is that the program provides a clear learning direction, which helped me understand where to begin when studying AWS.
 
-### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+The technology events also introduced new perspectives on Cloud Computing and AI. Although I could not fully understand every topic immediately, the presentations gave me more subjects to explore.
+
+I also value the opportunity to connect what I learned with a team project. While working on LoveSpot, I explored venue data, recommendation systems, and AWS deployment architecture.
+
+### 3. Areas for Improvement
+
+From my personal experience, FCAJ has provided a clear learning roadmap, useful reference materials, and activities that support participants throughout their AWS learning journey. The topics are organized in a way that helps me gradually move from basic concepts to more advanced knowledge.
+
+At the moment, I do not have any specific changes to suggest. I hope the program will continue its knowledge-sharing sessions, practical learning activities, and opportunities for community engagement.
+
+I also hope FCAJ will continue to grow and provide valuable learning opportunities for more students who are interested in technology.
+
+### 4. Would I Recommend FCAJ to My Friends?
+
+**Yes, I would recommend FCAJ to friends who are interested in Cloud Computing, AWS, or learning how applications are deployed in real environments.**
+
+I believe the program is suitable for students who want a starting point for learning AWS while exploring technologies used in software development.
+
+However, I also think participants should be willing to study independently and search for additional information.
+
+Some Cloud concepts may be challenging without a basic understanding of programming and computer networking.
+
+For this reason, I would encourage my friends to prepare some foundational knowledge and practice regularly throughout the program.
+
+### 5. Future Expectations
+
+After participating in FCAJ, I would like to continue learning about Cloud architecture, security, system monitoring, and AWS cost optimization.
+
+I also hope to have more opportunities to attend technical sessions and explore real projects so that I can better understand work in the Cloud Computing field.
+
+For LoveSpot, I plan to continue working with my team to improve the application and apply suitable knowledge gained from the program.
+
+### Conclusion
+
+Looking back on my experience in **First Cloud AI Journey**, I believe it has been a valuable learning opportunity.
+
+The program helped me expand my AWS knowledge and understand more about developing real applications. At the same time, it showed me which skills I still need to improve, especially self-learning, time management, and problem-solving.
+
+I hope FCAJ will continue to grow and provide useful learning experiences for future participants.
