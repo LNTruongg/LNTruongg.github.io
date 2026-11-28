@@ -47,6 +47,18 @@ Kiểm tra Account ID trả về khớp tài khoản bạn đang dùng trên Con
 
 Dùng các tên trong bài và tag `Project=CoupleLifeAI` cho tài nguyên hỗ trợ tag. Sau mỗi bước, lưu VPC ID, subnet IDs, security group IDs, RDS endpoint, ARN của master secret, image tag, tên bucket và CloudFront domain của bạn. Các ID hiển thị trong hình chỉ là ví dụ. Không sao chép credentials vào ghi chú.
 
+#### Cấu hình Google App Password
+
+Để sử dụng tính năng gửi email OTP khi người dùng quên mật khẩu:
+
+1. Truy cập Google Account → Security.
+2. Bật xác minh 2 bước (2-Step Verification).
+3. Truy cập https://myaccount.google.com/apppasswords.
+4. Tạo App Password với tên CoupleLife AI.
+5. Lưu mật khẩu ứng dụng gồm 16 ký tự để cấu hình SMTP ở bước tiếp theo.
+Không chia sẻ App Password hoặc lưu trực tiếp trong mã nguồn.
+
+
 #### Nội dung
 
 1. [Dự toán trước khi triển khai](5.2.1-Cost-estimation/)

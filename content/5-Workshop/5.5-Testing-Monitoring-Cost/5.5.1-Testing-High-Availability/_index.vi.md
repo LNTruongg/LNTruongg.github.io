@@ -74,3 +74,18 @@ Xem cấu hình ASG và Target Group tại mục 5.4.2 và 5.4.3.
 #### Kiểm thử mã nguồn
 
 Chạy bộ kiểm thử Backend theo workflow CI ở mục 5.4.5 và `npm ci` / `npm run build` trong frontend. Kiểm tra kết quả test và artifact trước khi build image hoặc triển khai phiên bản mới.
+
+
+#### Kiểm thử tính năng Quên mật khẩu
+
+1. Truy cập website và chọn Quên mật khẩu.
+2. Nhập địa chỉ email đã đăng ký.
+3. Kiểm tra hộp thư Gmail để nhận mã OTP gồm 6 chữ số.
+4. Nhập mã OTP trong thời hạn 5 phút.
+5. Đặt mật khẩu mới và đăng nhập lại.
+
+![Giao diện Quên mật khẩu](./image_5.5.1/03-forgot-password-step2-otp.png)
+
+![Email xác nhận OTP](./image_5.5.1/04-otp-email-actual-preview.png)
+
+Kết quả mong đợi: Người dùng nhận được email OTP và đặt lại mật khẩu thành công.

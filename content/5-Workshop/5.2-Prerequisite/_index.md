@@ -47,6 +47,17 @@ Check that the returned Account ID matches the account in your console. Local CL
 
 Use the names in this guide and the `Project=CoupleLifeAI` tag on resources that support tags. After each step, record your VPC ID, subnet IDs, security group IDs, RDS endpoint, master secret ARN, image tag, bucket name and CloudFront domain. IDs in illustrations are examples only. Do not store credentials in these notes.
 
+#### Configure Google App Password
+
+To enable email OTP for password recovery:
+
+1. Navigate to Google Account → Security.
+2. Enable 2-Step Verification.
+3. Visit https://myaccount.google.com/apppasswords.
+4. Create an App Password named CoupleLife AI.
+5. Save the 16-character App Password for SMTP configuration.
+Do not share the App Password or store it directly in the source code.
+
 #### Contents
 
 1. [Estimate costs before deployment](5.2.1-Cost-estimation/)

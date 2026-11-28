@@ -66,4 +66,18 @@ Chọn key `aws/secretsmanager`, thêm tag Project = CoupleLifeAI, không replic
 
 ![Hai application secrets và RDS-managed secret](./image_5.3.2/12-secrets-manager-created.png)
 
+#### Cấu hình Gmail SMTP
+
+1. Mở AWS Secrets Manager.
+2. Chọn secret `couplelife/production/backend`.
+3. Chọn Retrieve secret value → Edit.
+4. Bổ sung hai trường:
+   - `SMTP_USER`: Địa chỉ Gmail gửi email.
+   - `SMTP_PASSWORD`: Google App Password.
+5. Chọn Save.
+
+Backend sử dụng thông tin này để gửi email OTP khi người dùng quên mật khẩu.
+
+![Cấu hình SMTP trong Secrets Manager](./image_5.3.2/smtp-secrets-manager.png)
+
 **Lưu ý:** Nhập giá trị thật cho từng key; không dùng chuỗi mô tả hoặc placeholder. Xem mục 5.5.1 nếu AI Service trả lỗi 500.

@@ -74,3 +74,16 @@ See sections 5.4.2 and 5.4.3 for ASG and target group configuration.
 #### Source-level testing
 
 Run the backend test suite using the CI workflow in section 5.4.5 and `npm ci` / `npm run build` in the frontend. Check test results and artifacts before building images or deploying a new version.
+
+#### Test the Forgot Password Feature
+
+1. Access the website and select Forgot Password.
+2. Enter a registered email address.
+3. Check the Gmail inbox for a 6-digit OTP.
+4. Enter the OTP within 5 minutes.
+5. Set a new password and log in again.
+![](./image_5.5.1/03-forgot-password-step2-otp.png)
+
+![](./image_5.5.1/04-otp-email-actual-preview.png)
+
+Expected result: The user receives an OTP email and successfully resets the password.

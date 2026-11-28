@@ -66,4 +66,18 @@ Select `aws/secretsmanager`, tag Project = CoupleLifeAI, and do not replicate in
 
 ![Two application secrets and the RDS-managed secret](./image_5.3.2/12-secrets-manager-created.png)
 
+#### Configure Gmail SMTP
+
+1. Open AWS Secrets Manager.
+2. Select the `couplelife/production/backend` secret.
+3. Choose Retrieve secret value → Edit.
+4. Add the following fields:
+   - `SMTP_USER`: Gmail sender address.
+   - `SMTP_PASSWORD`: Google App Password.
+5. Choose Save.
+
+The Backend uses these credentials to send OTP emails for password recovery.
+
+![Configure SMTP in Secrets Manager](./image_5.3.2/smtp-secrets-manager.png)
+
 **Note:** Enter real values for each key, not descriptions or placeholders. See section 5.5.1 if AI Service returns HTTP 500.
