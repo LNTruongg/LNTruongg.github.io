@@ -1,3 +1,4 @@
+
 ---
 title: "Self-evaluation"
 date: 2026-11-25
@@ -8,61 +9,61 @@ pre: " <b> 6. </b> "
 
 ### Introduction
 
-During the **First Cloud AI Journey (FCAJ)** program, I spent time learning AWS services, practicing basic Cloud Computing concepts, and working with my team on **LoveSpot**.
+During my participation in the **First Cloud AI Journey (FCAJ)** program, I spent time learning about AWS services, practicing fundamental Cloud Computing concepts, and working with my team on the **LoveSpot** project.
 
-Besides studying AWS, I had opportunities to work with venue data, explore recommendation systems, test application features, and learn about cloud deployment architecture.
+Besides studying AWS, I had opportunities to work with data, explore how recommendation systems are built, test application features, and research cloud deployment architectures.
 
-These activities helped me improve my technical knowledge and understand more about organizing work in a software project. However, I also recognized several areas where I still need to improve.
+This experience helped me improve my technical knowledge and better understand how to organize tasks within a software development project. However, I also recognized several areas where I still need to improve.
 
-Below is my self-evaluation based on the eight criteria of the FCAJ program.
+Below is my self-evaluation based on eight criteria of the FCAJ program.
 
 ### 1. Self-evaluation Table
 
 | No. | Criteria | Good | Fair | Average | Comments |
 |---|---|:---:|:---:|:---:|---|
-| 1 | **Technical Knowledge** | ☐ | ✅ | ☐ | Gained basic knowledge of several AWS services, but still need more hands-on deployment experience. |
-| 2 | **Self-learning and Research** | ✅ | ☐ | ☐ | Actively explored documentation, learned new concepts, and researched technical problems. |
-| 3 | **Initiative** | ✅ | ☐ | ☐ | Took initiative in understanding requirements, preparing tasks, and exploring possible solutions. |
-| 4 | **Discipline and Compliance** | ☐ | ✅ | ☐ | Tried to follow the learning schedule, but need to improve time management. |
-| 5 | **Communication Skills** | ☐ | ✅ | ☐ | Communicated with team members, although I still need to express technical ideas more clearly. |
-| 6 | **Teamwork** | ☐ | ✅ | ☐ | Cooperated with team members and discussed project tasks, but need to provide more regular progress updates. |
-| 7 | **Problem-solving Skills** | ☐ | ✅ | ☐ | Practiced investigating issues and testing solutions, but need a more structured approach. |
-| 8 | **Workshop Contribution** | ☐ | ✅ | ☐ | Explored AWS architecture and prepared LoveSpot-related materials; the Workshop documentation still needs further improvement. |
+| 1 | **Technical Knowledge** | ☐ | ✅ | ☐ | Gained a basic understanding of various AWS services, but still need more practical deployment experience. |
+| 2 | **Self-learning and Research** | ✅ | ☐ | ☐ | Actively searched for learning materials, explored new technologies, and investigated problems encountered during the learning process. |
+| 3 | **Initiative at Work** | ✅ | ☐ | ☐ | Took initiative in understanding requirements, preparing tasks, and proposing solutions when necessary. |
+| 4 | **Discipline and Compliance with Regulations** | ✅ | ☐ | ☐ | Followed the planned schedule and complied with office rules and regulations. |
+| 5 | **Communication Skills** | ☐ | ✅ | ☐ | Communicated with team members about tasks, but sometimes found it difficult to express ideas clearly. |
+| 6 | **Teamwork** | ☐ | ✅ | ☐ | Cooperated and communicated with team members during project development, but need to improve the frequency of progress updates. |
+| 7 | **Problem-solving Skills** | ✅ | ☐ | ☐ | Able to investigate errors and try different approaches to solving problems. |
+| 8 | **Workshop Contribution** | ✅ | ☐ | ☐ | Thoroughly researched AWS architecture and prepared materials related to LoveSpot. |
 
-### 2. My Strengths
+### 2. What I Did Well
 
-During FCAJ, I believe my biggest improvement has been in self-learning and exploring new technologies.
+During my participation in FCAJ, I believe I made the most progress in self-learning and exploring new technologies.
 
-At first, I mainly knew AWS through basic concepts. After studying services such as EC2, S3, VPC, RDS, Lambda, and others, I developed a better understanding of how applications can be deployed in the cloud.
+Initially, I mainly knew AWS through basic concepts. After studying services such as EC2, S3, VPC, RDS, Lambda, and others, I gained a clearer understanding of how an application can be deployed in the cloud.
 
-While working on LoveSpot, I also gained experience with more practical tasks, including processing venue data, exploring recommendation systems, and checking application results.
+While working on the LoveSpot project, I also had opportunities to take on more practical tasks, such as processing venue data, exploring recommendation systems, and checking application results.
 
-Preparing AWS architecture diagrams and related documentation also helped me think more carefully about choosing services based on project requirements and costs.
+In addition, preparing architecture diagrams and AWS-related documentation helped me learn how to choose appropriate services based on a project's requirements and costs.
 
 ### 3. Areas for Improvement
 
-Although I have learned many new things, there are still several areas where I need to improve:
+Despite the knowledge I have gained, there are still several areas where I need to improve:
 
-- **AWS Practical Skills:** I need more hands-on experience with configuring services, connecting components, and troubleshooting cloud applications.
-- **Time Management:** I should organize my time better between learning, project development, and documentation.
-- **Communication:** I need to practice explaining my ideas more clearly and asking for help when necessary.
-- **Problem-solving:** I should analyze problems more carefully before trying different solutions.
-- **Technical Documentation:** I need to improve how I document implementation steps and testing results so that others can follow them easily.
+- **Practical AWS Skills:** I need more hands-on experience to better understand how to configure, connect, and troubleshoot AWS services.
+- **Time Management:** I need to organize my time more effectively between learning new concepts, working on projects, and writing reports.
+- **Communication Skills:** I need to practice presenting ideas clearly and concisely, as well as communicating proactively when facing difficulties.
+- **Problem-solving Mindset:** I need to analyze the root causes of problems before trying solutions, rather than spending too much time on approaches that may not be suitable.
+- **Technical Documentation:** I need to improve how I document implementation steps and testing results so that others can easily understand and follow them.
 
 ### 4. Future Development Goals
 
-In the future, I want to strengthen my AWS knowledge through more practical exercises and real application deployments.
+In the future, I want to continue strengthening my AWS knowledge through hands-on practice and real application deployments.
 
-I would also like to learn more about system architecture, data management, security, and cloud cost optimization. These are important areas for my development in Cloud Computing.
+I would also like to explore system design, data management, security, and cloud cost optimization in greater depth. I believe these areas are essential for pursuing a career in Cloud Computing.
 
 For LoveSpot, I want to continue improving the recommendation system, testing application features, and learning more about operating applications on AWS.
 
-At the same time, I plan to improve my teamwork, time management, and technical communication skills.
+Additionally, I will work on improving my teamwork, time management, and ability to explain technical concepts.
 
 ### Conclusion
 
-Looking back on my experience in **First Cloud AI Journey**, I believe I have gained useful knowledge and had opportunities to apply some of it to a project.
+Looking back on my participation in the **First Cloud AI Journey** program, I realize that I have gained a great deal of new knowledge and had opportunities to apply some of it to a real project.
 
-Although I still have weaknesses to work on, the program has helped me identify the skills I need to develop further.
+Although I still have areas that need improvement, I see this experience as an opportunity to identify the skills I should continue developing.
 
-I hope the experience gained from FCAJ will help me study more effectively and prepare for future opportunities in Cloud Computing and software development.
+I hope the knowledge and experience gained from the program will help me study more effectively and better prepare for future opportunities in Cloud Computing and software development.

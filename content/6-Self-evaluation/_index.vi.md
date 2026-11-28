@@ -23,11 +23,11 @@ Dưới đây là phần tự đánh giá của tôi dựa trên tám tiêu chí
 | 1 | **Kiến thức chuyên môn** | ☐ | ✅ | ☐ | Đã nắm được kiến thức cơ bản về nhiều dịch vụ AWS, nhưng cần thêm kinh nghiệm triển khai thực tế. |
 | 2 | **Khả năng tự học và nghiên cứu** | ✅ | ☐ | ☐ | Chủ động tìm tài liệu, học thêm kiến thức mới và tìm hiểu những vấn đề gặp phải. |
 | 3 | **Tính chủ động trong công việc** | ✅ | ☐ | ☐ | Có ý thức tìm hiểu yêu cầu, chuẩn bị công việc và đề xuất hướng giải quyết khi cần. |
-| 4 | **Kỷ luật và tuân thủ quy định** | ☐ | ✅ | ☐ | Cố gắng thực hiện đúng kế hoạch, nhưng cần quản lý thời gian học tập và làm dự án tốt hơn. |
+| 4 | **Kỷ luật và tuân thủ quy định** | ✅ | ☐ | ☐ | Thực hiện đúng kế hoạch và tuân thủ qui định văn phòng |
 | 5 | **Kỹ năng giao tiếp** | ☐ | ✅ | ☐ | Có trao đổi công việc với các thành viên, nhưng đôi lúc chưa trình bày ý tưởng thật rõ ràng. |
 | 6 | **Làm việc nhóm** | ☐ | ✅ | ☐ | Biết phối hợp và trao đổi khi thực hiện dự án, cần cải thiện việc cập nhật tiến độ thường xuyên. |
-| 7 | **Năng lực giải quyết vấn đề** | ☐ | ✅ | ☐ | Có khả năng tìm hiểu lỗi và thử các hướng xử lý, nhưng cần rèn luyện cách phân tích vấn đề có hệ thống hơn. |
-| 8 | **Đóng góp cho Workshop** | ☐ | ✅ | ☐ | Đã tìm hiểu kiến trúc AWS và chuẩn bị nội dung liên quan đến LoveSpot; phần tài liệu Workshop vẫn cần tiếp tục hoàn thiện. |
+| 7 | **Năng lực giải quyết vấn đề** | ✅ | ☐ | ☐ | Có khả năng tìm hiểu lỗi và thử các hướng xử lý vấn đề. |
+| 8 | **Đóng góp cho Workshop** | ✅ | ☐ | ☐ | Đã tìm hiểu kỹ kiến trúc AWS và chuẩn bị nội dung liên quan đến LoveSpot. |
 
 ### 2. Những điều đã làm tốt
 
