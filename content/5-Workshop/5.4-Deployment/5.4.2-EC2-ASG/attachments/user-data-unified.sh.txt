@@ -1,0 +1,147 @@
+#!/bin/bash
+# ==============================================================================
+# EC2 User Data — Unified Backend & AI Service Co-located Host
+# Target: your AWS account (ap-southeast-1)
+# Instances: t3.small under Auto Scaling Group (ASG 2/2/2)
+# ==============================================================================
+set -euo pipefail
+
+echo "=== [1/7] Update system & install dependencies ==="
+dnf install -y docker jq
+command -v aws >/dev/null || dnf install -y awscli2
+# The official AL2023 AMI includes the SSM Agent.
+
+echo "=== [2/7] Enable & Start System Services ==="
+systemctl enable --now amazon-ssm-agent
+systemctl enable --now docker
+usermod -aG docker ec2-user
+
+echo "=== [3/7] Configure Docker daemon logging to prevent disk exhaustion ==="
+mkdir -p /etc/docker
+cat <<EOF > /etc/docker/daemon.json
+{
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "20m",
+    "max-file": "5"
+  }
+}
+EOF
+systemctl restart docker
+
+echo "=== [4/7] Create Docker Bridge Network ==="
+# Docker bridge network enables DNS resolution: backend accesses http://ai-service:8000
+docker network create couplelife-net || true
+
+echo "=== [5/7] Retrieve Secrets from AWS Secrets Manager ==="
+AWS_REGION="ap-southeast-1"
+ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+ECR_REGISTRY="${ACCOUNT_ID}.dkr.ecr.ap-southeast-1.amazonaws.com"
+IMAGE_TAG="REPLACE_WITH_ECR_IMAGE_TAG"  # Target commit SHA; matched with ECR image tag
+
+umask 077
+mkdir -p /etc/couplelife
+
+# 1. AI Service Secrets
+AI_SECRETS_JSON=$(aws secretsmanager get-secret-value --region "$AWS_REGION" --secret-id "couplelife/production/ai-service" --query SecretString --output text)
+cat <<EOF > /etc/couplelife/ai-service.env
+PORT=8000
+EMBED_PROVIDER=cloudflare
+AI_PROVIDER=groq
+INTERNAL_API_SECRET=$(echo "$AI_SECRETS_JSON" | jq -r .INTERNAL_API_SECRET)
+CLOUDFLARE_ACCOUNT_ID=$(echo "$AI_SECRETS_JSON" | jq -r .CLOUDFLARE_ACCOUNT_ID)
+CLOUDFLARE_API_TOKEN=$(echo "$AI_SECRETS_JSON" | jq -r .CLOUDFLARE_API_TOKEN)
+GROQ_API_KEY=$(echo "$AI_SECRETS_JSON" | jq -r .GROQ_API_KEY)
+GROQ_MODEL=openai/gpt-oss-20b
+GROQ_TIMEOUT_SECONDS=30
+GROQ_MAX_RETRIES=2
+AI_FALLBACK_ENABLED=true
+EOF
+chmod 600 /etc/couplelife/ai-service.env
+
+# 2. Backend Secrets
+BE_SECRETS_JSON=$(aws secretsmanager get-secret-value --region "$AWS_REGION" --secret-id "couplelife/production/backend" --query SecretString --output text)
+cat <<EOF > /etc/couplelife/backend.env
+PORT=8080
+ENV=production
+AUTO_INIT_DB=false
+SECRET_KEY=$(echo "$BE_SECRETS_JSON" | jq -r .SECRET_KEY)
+INTERNAL_TOKEN=$(echo "$BE_SECRETS_JSON" | jq -r .INTERNAL_TOKEN)
+DATABASE_URL=$(echo "$BE_SECRETS_JSON" | jq -r .DATABASE_URL)
+AI_SERVICE_URL=http://ai-service:8000
+ENABLE_LOCAL_ROUTE_PROXY=true
+ENABLE_PRODUCTION_ROUTE_PROXY=true
+ENABLE_LOCAL_ROUTE_POI_PROXY=true
+ENABLE_LOCAL_MULTI_WAYPOINT_PROXY=true
+ENABLE_LOCAL_ITINERARY_REFINE_PROXY=true
+CORS_ORIGINS=$(echo "$BE_SECRETS_JSON" | jq -r .CORS_ORIGINS)
+EOF
+chmod 600 /etc/couplelife/backend.env
+
+echo "=== [6/7] Authenticate ECR & Pull Production Images ==="
+aws ecr get-login-password --region "$AWS_REGION" | docker login --username AWS --password-stdin "$ECR_REGISTRY"
+
+# Pull production images by exact commit SHA tag
+AI_IMAGE="${ECR_REGISTRY}/couplelife-ai-service:${IMAGE_TAG}"
+docker pull "$AI_IMAGE"
+
+BE_IMAGE="${ECR_REGISTRY}/couplelife-backend:${IMAGE_TAG}"
+docker pull "$BE_IMAGE"
+
+echo "=== [7/7] Install & Start Systemd Units for Auto-Restart ==="
+
+# 1. AI Service Unit
+cat <<EOF > /etc/systemd/system/couplelife-ai-service.service
+[Unit]
+Description=CoupleLife AI Recommendation Microservice
+After=docker.service
+Requires=docker.service
+
+[Service]
+TimeoutStartSec=0
+Restart=always
+RestartSec=5s
+ExecStartPre=-/usr/bin/docker stop couplelife-ai-service
+ExecStartPre=-/usr/bin/docker rm couplelife-ai-service
+ExecStart=/usr/bin/docker run --name couplelife-ai-service \\
+  --network couplelife-net \\
+  --network-alias ai-service \\
+  --env-file /etc/couplelife/ai-service.env \\
+  -p 8000:8000 \\
+  ${AI_IMAGE}
+ExecStop=/usr/bin/docker stop couplelife-ai-service
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# 2. Backend Gateway Unit
+cat <<EOF > /etc/systemd/system/couplelife-backend.service
+[Unit]
+Description=CoupleLife Backend FastAPI Gateway
+After=docker.service couplelife-ai-service.service
+Requires=docker.service couplelife-ai-service.service
+
+[Service]
+TimeoutStartSec=0
+Restart=always
+RestartSec=5s
+ExecStartPre=-/usr/bin/docker stop couplelife-backend
+ExecStartPre=-/usr/bin/docker rm couplelife-backend
+ExecStart=/usr/bin/docker run --name couplelife-backend \\
+  --network couplelife-net \\
+  --network-alias backend \\
+  --env-file /etc/couplelife/backend.env \\
+  -p 8080:8080 \\
+  ${BE_IMAGE}
+ExecStop=/usr/bin/docker stop couplelife-backend
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl daemon-reload
+systemctl enable --now couplelife-ai-service
+systemctl enable --now couplelife-backend
+
+echo "=== EC2 Unified Bootstrap Completed Successfully ==="

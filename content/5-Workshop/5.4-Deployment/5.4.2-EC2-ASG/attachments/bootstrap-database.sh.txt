@@ -1,0 +1,50 @@
+#!/bin/bash
+# Lab-adapted bootstrap template. Run on ONE EC2 instance as root through SSM.
+set -euo pipefail
+umask 077
+AWS_REGION=ap-southeast-1
+RDS_ENDPOINT="REPLACE_WITH_RDS_ENDPOINT"
+RDS_MASTER_SECRET_ID="REPLACE_WITH_RDS_MASTER_SECRET_ARN"
+IMAGE_TAG="REPLACE_WITH_ECR_IMAGE_TAG"
+ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+BACKEND_IMAGE="$ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/couplelife-backend:$IMAGE_TAG"
+if [[ "$RDS_ENDPOINT" == REPLACE_* || "$RDS_MASTER_SECRET_ID" == REPLACE_* || "$IMAGE_TAG" == REPLACE_* ]]; then
+  echo 'Replace all configuration placeholders first.' >&2; exit 1
+fi
+MASTER_FILE=$(mktemp)
+trap 'rm -f "$MASTER_FILE"' EXIT
+aws secretsmanager get-secret-value --region "$AWS_REGION" --secret-id "$RDS_MASTER_SECRET_ID" --query SecretString --output text > "$MASTER_FILE"
+docker run --rm -i --env-file /etc/couplelife/backend.env \
+  -e RDS_HOST="$RDS_ENDPOINT" -v "$MASTER_FILE:/run/rds-master.json:ro" \
+  "$BACKEND_IMAGE" python - <<'PYDB'
+import json, os
+from urllib.parse import urlsplit, unquote
+import psycopg2
+from psycopg2 import sql
+with open('/run/rds-master.json') as f:
+    master = json.load(f)
+url = urlsplit(os.environ['DATABASE_URL'])
+app_user, app_pass, db_name = unquote(url.username or ''), unquote(url.password or ''), unquote(url.path.lstrip('/'))
+assert app_user == 'couplelife_app' and db_name == 'couplelife_db' and app_pass
+assert url.hostname == os.environ['RDS_HOST']
+kw = dict(host=os.environ['RDS_HOST'], user=master['username'], password=master['password'], sslmode='require', connect_timeout=10)
+conn = psycopg2.connect(dbname='postgres', **kw)
+conn.autocommit = True
+with conn.cursor() as cur:
+    cur.execute('SELECT 1 FROM pg_roles WHERE rolname=%s', (app_user,))
+    if not cur.fetchone():
+        cur.execute(sql.SQL('CREATE ROLE {} LOGIN PASSWORD %s').format(sql.Identifier(app_user)), (app_pass,))
+    else:
+        cur.execute(sql.SQL('ALTER ROLE {} WITH PASSWORD %s').format(sql.Identifier(app_user)), (app_pass,))
+    cur.execute('SELECT 1 FROM pg_database WHERE datname=%s', (db_name,))
+    if not cur.fetchone():
+        cur.execute(sql.SQL('CREATE DATABASE {}').format(sql.Identifier(db_name)))
+    cur.execute(sql.SQL('GRANT ALL PRIVILEGES ON DATABASE {} TO {}').format(sql.Identifier(db_name), sql.Identifier(app_user)))
+conn.close()
+conn = psycopg2.connect(dbname=db_name, **kw)
+with conn, conn.cursor() as cur:
+    cur.execute(sql.SQL('GRANT USAGE, CREATE ON SCHEMA public TO {}').format(sql.Identifier(app_user)))
+conn.close()
+PYDB
+docker run --rm --env-file /etc/couplelife/backend.env "$BACKEND_IMAGE" alembic upgrade head
+docker run --rm --env-file /etc/couplelife/backend.env "$BACKEND_IMAGE" python scripts/seed_places.py
