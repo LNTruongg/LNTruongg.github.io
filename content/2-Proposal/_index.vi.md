@@ -7,7 +7,7 @@ pre: " <b> 2. </b> "
 ---
 # CoupleLife AI – Intelligent Couple Activity Discovery & Itinerary Planning Platform
 
-## Nền tảng hỗ trợ khám phá địa điểm và lập lịch trình cho các cặp đôi tại TP. Hồ Chí Minh
+## Nền tảng hỗ trợ khám phá địa điểm và lập lịch trình cho các cặp đôi tại             TP. Hồ Chí Minh
 
 ### 1. Tổng quan, mục tiêu và phạm vi
 
